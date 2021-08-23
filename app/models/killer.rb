@@ -1,0 +1,2 @@
+class Killer < ApplicationRecord
+end

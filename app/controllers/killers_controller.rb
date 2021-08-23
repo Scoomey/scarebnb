@@ -1,0 +1,2 @@
+class KillersController < ApplicationController
+end
