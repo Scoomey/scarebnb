@@ -1,6 +1,25 @@
-<div class="container">
 
-  <h1>New Spooking</h1>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="width: 0;height: 0;">
+  <defs>
+    <filter id="goo">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur" />
+      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+      <feBlend in="SourceGraphic" in2="goo" />
+    </filter>
+  </defs>
+</svg>
+
+<h1 class="title">
+  New Spooking!
+  <span class="drop"></span>
+  <span class="drop"></span>
+  <span class="drop"></span>
+  <span class="drop"></span>
+  <span class="drop"></span>
+</h1>
+
+
+<div class="container">
     <%= simple_form_for [@spooking] do |f| %>
       <%= f.error_notification %>
       <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
@@ -10,5 +29,5 @@
       <%= f.submit %>
     <% end %>
 
-  <%= link_to 'Back', spookings_path, class: "btn btn-secondary mt-4" %>
+  <%= link_to 'Back', root_path, class: "btn btn-secondary mt-4" %>
   </div>
