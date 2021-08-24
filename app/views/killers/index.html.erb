@@ -20,10 +20,14 @@
 
 
 
-<div class="container">
+<div class="card-container">
   <% @killers.each do | killer| %>
-  <div class="card">
-  <%= killer.name %>
-  </div>
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title"><strong><%= killer.alias %></strong></h5>
+          <p class="card-text"><%= killer.name %> </p>
+          <a href="#" class="btn btn-danger">View Killer</a>
+        </div>
+      </div>
   <% end %>
 </div>
