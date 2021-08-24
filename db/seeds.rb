@@ -9,8 +9,8 @@
 
 nemesis = Killer.create!(
   [ user_id: 1,
-    name: 'Nemesis',
-    alias: 'The Tyrant',
+    name: 'The Tyrant',
+    alias: 'Nemesis',
     bio: 'The Nemesis is a Model T-103 Tyrant',
     location: 'Raccoon City',
     price: 2000]
@@ -26,8 +26,8 @@ the_executioner = Killer.create!(
 
 freddy_krueger = Killer.create!(
   [ user_id: 1,
-    name: "Freddy Krueger",
-    alias: "The Nightmare",
+    name: "The Nightmare",
+    alias: "Freddy Krueger",
     bio: "Even while he lived, Freddy Krueger was a creature of nightmares",
     location: "Elm Street",
     price: 200]
@@ -52,8 +52,8 @@ pinhead = Killer.create!(
     )
 the_abomination = Killer.create!(
   [ user_id: 1,
-    name: "The Abomination",
-    alias: "The Taker of Souls",
+    name: "The Taker of Souls",
+    alias: "The Abomination ",
     bio: "The Taker of Souls is the incorporeal entity from another world.",
     location: "Summoned from Naturom Demonto",
     price: 10000,]
@@ -61,8 +61,8 @@ the_abomination = Killer.create!(
 
 the_demogorgon = Killer.create!(
   [ user_id: 1,
-    name: "The Demogorgon",
-    alias: "The Monster",
+    name: "The Monster",
+    alias: "The Demogorgon",
     bio: "A blooming mouth full of needle-like teeth for a face, large, curved, razor-sharp claws, and powerful leg.",
     location: "Hawkins National Laboratory",
     price: 40000,]
@@ -79,8 +79,8 @@ the_pig = Killer.create!(
 
 creeper = Killer.create!(
   [ user_id: 1,
-    name: "Creeper",
-    alias: "Mysterious demon",
+    name: "The Demon",
+    alias: "Creeper",
     bio: "It is an ancient, mysterious demon, who seeks organs from humans to replace its own.",
     location: "North Central Florida",
     price: "10000",]
