@@ -1,10 +1,10 @@
-<h2>My Spookings</h2>
-<div class="container">
+<h2 class="mt-5">My New Spooking</h2>
+<div class="container mt-5">
   <div>
-    <% @spookings.each do |spooking| %>
-      <h4><%= spooking.killer_id %></h4>
-      <p><%= spooking.start_date %></p>
-      <p><%= spooking.end_date %></p>
-    <% end %>
+    <%# <% @spooking.each do |spooking| %>
+      <h4><%= @spooking.killer.name %></h4>
+      <p><%= @spooking.start_date %></p>
+      <p><%= @spooking.end_date %></p>
+    <%# <% end %>
   </div>
 </div>
