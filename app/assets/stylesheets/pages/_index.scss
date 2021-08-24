@@ -6,4 +6,73 @@ body {
   background-image: url("https://images.unsplash.com/photo-1523804427826-322aa3cfaa42");
   background-size: 100%;
   color: whitesmoke;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: Raleway, sans-serif;
+}
+
+.skull {
+  border: 2px solid rgb(90, 10, 10);
+  border-radius: 50%;
+  height: 45px;
+  width: 45px;
+}
+
+.title {
+  font-weight: 1000;
+  font-size: 80px;
+  margin: 0 auto;
+  filter: url(#goo);
+  position: relative;
+  letter-spacing: -.04em;
+  color: rgb(124, 12, 12);
+  text-transform: uppercase;
+}
+
+.drop {
+  width: .1em; height: .1em;
+  border-radius: 0 100% 100% 100%;
+  background-color: currentColor;
+  position: absolute;
+  top: 72%;
+  animation: drop 3s infinite both;
+
+  &:nth-child(1) {
+    left: 14%;
+  }
+
+  &:nth-child(2) {
+    left: 39%;
+    animation-delay: -.4s;
+  }
+
+  &:nth-child(3) {
+    left: 55%;
+    animation-delay: -1.5s;
+  }
+
+  &:nth-child(4) {
+    left: 82%;
+    animation-delay: -.8s;
+  }
+
+  &:nth-child(5) {
+    left: 95.5%;
+    animation-delay: -1.3s;
+  }
+}
+
+@keyframes drop {
+  0% {
+    transform: translateY(0) scaleX(.85) rotate(45deg);
+    animation-timing-function: ease-out;
+  }
+  60% {
+    transform: translateY(120%) scaleX(.85) rotate(45deg);
+    animation-timing-function: ease-in;
+  }
+  80%, 100% {
+    transform: translateY(60vh) scaleX(.85) rotate(45deg);
+  }
 }

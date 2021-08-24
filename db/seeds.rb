@@ -5,6 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
 nemesis = Killer.create!(
   [ user_id: 1,
     name: 'Nemesis',
@@ -41,6 +43,7 @@ He does as he is told. His family loves him and that is all that matters. Outsid
     location: "Texas",
     price: 500,]
   )
+
 
 pinhead = Killer.create!(
   [ user_id: 5,

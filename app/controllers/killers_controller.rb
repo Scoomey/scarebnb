@@ -1,2 +1,45 @@
 class KillersController < ApplicationController
+  before_action :set_killer, only: [:show, :edit, :update, :destroy]
+
+  def index
+    @killers = Killer.all
+  end
+
+  def new
+    @killer = Killer.new
+  end
+
+  def create
+    @killer = Killer.new(killer_params)
+    @killer.user = current_user
+    if @killer.save
+      redirect_to _path
+    else
+      render 'new'
+    end
+  end
+
+  def show; end
+
+  def edit; end
+
+  def update
+    @killer.update(killer_params)
+    redirect_to killer_path(@killer)
+  end
+
+  def destroy
+    @killer.destroy
+    redirect_to killers_path
+  end
+
+  private
+
+  def set_killer
+    @killer = Killer.find(params[:id])
+  end
+
+  def killer_params
+    params.require(:killer).permit(:user_id, :name, :bio, :price, :weapon, :abilities, :location, :alias)
+  end
 end
