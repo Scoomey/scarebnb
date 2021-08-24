@@ -10,19 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_24_091825) do
+ActiveRecord::Schema.define(version: 2021_08_24_101338) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "killers", force: :cascade do |t|
-    t.string "name"
-    t.text "bio"
-    t.integer "price"
-    t.string "weapon"
-    t.string "abilities"
-    t.string "location"
-    t.string "alias"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "user_id", null: false
@@ -32,6 +25,12 @@ ActiveRecord::Schema.define(version: 2021_08_24_091825) do
   create_table "spookings", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.date "start_date"
+    t.date "end_date"
+    t.bigint "user_id", null: false
+    t.bigint "killer_id", null: false
+    t.index ["killer_id"], name: "index_spookings_on_killer_id"
+    t.index ["user_id"], name: "index_spookings_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -47,4 +46,6 @@ ActiveRecord::Schema.define(version: 2021_08_24_091825) do
   end
 
   add_foreign_key "killers", "users"
+  add_foreign_key "spookings", "killers"
+  add_foreign_key "spookings", "users"
 end
