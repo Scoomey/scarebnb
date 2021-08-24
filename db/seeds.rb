@@ -83,5 +83,5 @@ creeper = Killer.create!(
     alias: "Mysterious demon",
     bio: "It is an ancient, mysterious demon, who seeks organs from humans to replace its own.",
     location: "North Central Florida",
-    price: "10000",]
+    price: 10000,]
   )
