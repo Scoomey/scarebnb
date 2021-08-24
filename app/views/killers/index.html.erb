@@ -1,0 +1,8 @@
+<h1>These are the killers</h1>
+
+<div class="d-flex">
+  <% @killers.each do | killer| %>
+  <li><%= killer.name %></li>
+  <li><%= killer.alias%></li>
+  <% end %>
+</div>
