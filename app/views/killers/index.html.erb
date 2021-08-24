@@ -21,9 +21,9 @@
 
 
 <div class="container">
-<div class="d-flex">
   <% @killers.each do | killer| %>
-  <li><%= killer.name %></li>
+  <div class="card">
+  <%= killer.name %>
+  </div>
   <% end %>
-</div>
 </div>
