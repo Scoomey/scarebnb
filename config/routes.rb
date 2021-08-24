@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
+  resource :user do
+    resources :spookings, only: [:index, :show]
+  end
   root to: 'pages#home'
   resources :killers
   resources :killers, only: [:index] do
