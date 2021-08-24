@@ -12,9 +12,12 @@ class SpookingsController < ApplicationController
 
   def create
     @spooking = Spooking.new(spooking_params)
-    @spooking.save
-    redirect_to _path
-
+    @spooking.user = current_user
+    @spooking.killer = Killer.find(params[:killer_id])
+    if @spooking.save
+    redirect_to spookings_path
+    else render "new"
+    end
   end
 
   def edit; end
@@ -30,13 +33,13 @@ class SpookingsController < ApplicationController
   def confirm
     @spooking.status = "confirmed"
     @spooking.save
-    redirect_to _path
+    redirect_to spookings_path
   end
 
   def decline
     spooking.status = "declined"
     spooking.save
-    redirect_to _path
+    redirect_to spookings_path
   end
 
   private
