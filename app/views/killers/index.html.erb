@@ -26,8 +26,11 @@
         <div class="card-body">
           <h5 class="card-title"><strong><%= killer.alias %></strong></h5>
           <p class="card-text"><%= killer.name %> </p>
-          <a href="#" class="btn btn-danger">View Killer</a>
+            <%= link_to "View Killer", killer_path(killer), class: "btn btn-danger" %>
+
         </div>
       </div>
   <% end %>
 </div>
+
+<div></div>
