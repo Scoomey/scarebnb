@@ -1,0 +1,14 @@
+<div class="container">
+
+  <h1>New Spooking</h1>
+    <%= simple_form_for [@spooking] do |f| %>
+      <%= f.error_notification %>
+      <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+      <%= f.input :start_date, as: :date, html5: true %>
+      <%= f.input :end_date, as: :date, html5: true %>
+      <%= f.association :killer %>
+      <%= f.submit %>
+    <% end %>
+
+  <%= link_to 'Back', spookings_path, class: "btn btn-secondary mt-4" %>
+  </div>
