@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :killers, only: [:index] do
     resources :spookings, only: [:index,:show, :create]
   end
-  resources :spookings, only: [:index] do
+  resources :spookings do
     member do
       post "confirmed", to: "spookings#confirmed"
       post "declined", to: "spookings#declined"
