@@ -15,7 +15,7 @@ class SpookingsController < ApplicationController
     @spooking.user = current_user
     @spooking.killer = Killer.find(params['spooking']['killer_id'])
     if @spooking.save
-    redirect_to spookings_path
+    redirect_to spooking_path(@spooking)
     else render "new"
     end
   end
