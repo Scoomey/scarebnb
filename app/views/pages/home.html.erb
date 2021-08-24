@@ -1,2 +1,22 @@
-<h1>Welcome to Scare BnB!</h1>
-<%= link_to 'Spook Someone', new_spooking_path%>
+
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="width: 0;height: 0;">
+  <defs>
+    <filter id="goo">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur" />
+      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+      <feBlend in="SourceGraphic" in2="goo" />
+    </filter>
+  </defs>
+</svg>
+
+<h1 class="title">
+  Welcome to SCAREBNB!
+  <span class="drop"></span>
+  <span class="drop"></span>
+  <span class="drop"></span>
+  <span class="drop"></span>
+  <span class="drop"></span>
+</h1>
+
+<%= link_to 'Spook Someone', new_spooking_path, class: "btn btn-danger"%>
+<%= link_to 'Killer Gallery', killers_path, class: "btn btn-danger"%>
