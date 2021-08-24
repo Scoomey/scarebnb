@@ -1,8 +1,29 @@
-<h1>These are the killers</h1>
 
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="width: 0;height: 0;">
+  <defs>
+    <filter id="goo">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur" />
+      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+      <feBlend in="SourceGraphic" in2="goo" />
+    </filter>
+  </defs>
+</svg>
+
+<h1 class="title">
+  Available killers!
+  <span class="drop"></span>
+  <span class="drop"></span>
+  <span class="drop"></span>
+  <span class="drop"></span>
+  <span class="drop"></span>
+</h1>
+
+
+
+<div class="container">
 <div class="d-flex">
   <% @killers.each do | killer| %>
   <li><%= killer.name %></li>
-  <li><%= killer.alias%></li>
   <% end %>
+</div>
 </div>
