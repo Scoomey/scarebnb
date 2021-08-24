@@ -1,2 +1,18 @@
-<p><%=  @killer.name%></p>
-<p><%=  @killer.alias %></p>
+
+<div class="card mt-5">
+
+  <div class="py-3">
+    <h2><%=  @killer.name%></h2>
+    <h3><%= @killer.alias %></h3>
+    <h4>£<%= @killer.price %></h4>
+  </div>
+
+  <div class="">
+  <p><%= @killer.bio %></p>
+  </div>
+
+  <div class="">
+  <p><%= @killer.location %></p>
+  </div>
+
+</div>
