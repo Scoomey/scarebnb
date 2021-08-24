@@ -26,7 +26,7 @@ the_executioner = Killer.create!(
 
 freddy_krueger = Killer.create!(
   [ user_id: 1,
-    name: "freddy_krueger",
+    name: "Freddy Krueger",
     alias: "The Nightmare",
     bio: "Even while he lived, Freddy Krueger was a creature of nightmares",
     location: "Elm Street",
@@ -71,7 +71,7 @@ the_demogorgon = Killer.create!(
 the_pig = Killer.create!(
   [ user_id: 1,
     name: "Amanda Young",
-    alias: "the Pig",
+    alias: "The Pig",
     bio: "When John Kramer, better known as Jigsaw",
     location: "Somewhere in america",
     price: 2000,]
