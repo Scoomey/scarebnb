@@ -13,7 +13,7 @@ class KillersController < ApplicationController
     @killer = Killer.new(killer_params)
     @killer.user = current_user
     if @killer.save
-      redirect_to _path
+      redirect_to killer_path(@killer)
     else
       render 'new'
     end
