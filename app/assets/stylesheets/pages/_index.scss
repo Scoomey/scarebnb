@@ -6,9 +6,24 @@
   width: 700px;
 }
 
+.killer-form {
+ width: 500px;
+ margin: auto;
+}
+
+.form-control {
+  background-color: rgb(53, 52, 52) ;
+  border:2px solid rgb(90, 10, 10);
+}
+
+.btn {
+  color: black !important;
+}
+
 body {
-  background-image: url("https://images.unsplash.com/photo-1523804427826-322aa3cfaa42");
+  background-image: url("spooky_hallway.jpeg");
   background-size: 100%;
+  background-attachment: fixed;
   color: whitesmoke;
   align-items: center;
   justify-content: center;
@@ -79,4 +94,25 @@ body {
   80%, 100% {
     transform: translateY(60vh) scaleX(.85) rotate(45deg);
   }
+}
+
+a {
+  text-decoration: none !important;
+  color: rgb(124, 12, 12);
+}
+
+
+p {
+  color: rgb(124, 12, 12);
+}
+
+h1 {
+  color: rgb(124, 12, 12);
+}
+h2 {
+  color: rgb(124, 12, 12);
+}
+
+label {
+  color: rgb(124, 12, 12);
 }

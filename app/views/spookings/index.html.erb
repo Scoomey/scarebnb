@@ -9,7 +9,7 @@
 </svg>
 
 <h1 class="title">
-   <%= @killer.name %>
+  Your Spookings!
   <span class="drop"></span>
   <span class="drop"></span>
   <span class="drop"></span>
@@ -19,32 +19,20 @@
 
 
 
+<div class="card-container">
+  <% @spooking.each do | spooking| %>
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title"><strong><%= spooking.start_date %></strong></h5>
+          <p class="card-text"><%= spooking.end_date %> </p>
+            <%= link_to "View spooking", spooking_path(spooking), class: "btn btn-danger" %>
 
-
-
-<div class="killer-card">
-<div class="card mt-5">
-
-  <div class="py-3">
-    <h3><%= @killer.alias %></h3>
-    <h4>£<%= @killer.price %></h4>
-  </div>
-
-  <div class="">
-  <p><%= @killer.bio %></p>
-  </div>
-
-  <div class="">
-  <p><%= @killer.location %></p>
-  </div>
-
+        </div>
+      </div>
+  <% end %>
 </div>
-</div>
-<div><%= link_to 'Book this killer', new_spooking_path, class: "btn btn-danger mt-4" %></div>
 
-
-
-    <%= link_to killers_path do %>
+    <%= link_to root_path do %>
     <div class="back">
       <h1 class="glitch" data-text="back"> </h1>
       </div>
