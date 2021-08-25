@@ -34,6 +34,15 @@
       <%= f.submit %>
     <% end %>
 
-  <%= link_to 'Back', root_path, class: "btn btn-danger mt-4" %>
+
   </div>
 </div>
+
+
+<%= link_to root_path do %>
+<div></div>
+  <h1 class="glitch" data-text="back">
+    <%= link_to "back", root_path %>
+    </h1>
+    </div>
+<% end %>
