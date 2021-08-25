@@ -13,7 +13,8 @@ nemesis = Killer.create!(
     alias: 'Nemesis',
     bio: 'The Nemesis is a Model T-103 Tyrant',
     location: 'Raccoon City',
-    price: 2000]
+    price: 2000
+    image: "/app/assets/images/nemesis"]
 )
 the_executioner = Killer.create!(
   [ user_id: 1,
