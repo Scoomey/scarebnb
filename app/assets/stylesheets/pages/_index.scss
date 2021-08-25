@@ -1,6 +1,10 @@
 // Import page-specific CSS files here.
 @import "home";
 
+.killer-card {
+  margin: auto;
+  width: 700px;
+}
 
 body {
   background-image: url("https://images.unsplash.com/photo-1523804427826-322aa3cfaa42");
