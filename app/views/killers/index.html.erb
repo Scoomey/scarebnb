@@ -23,7 +23,7 @@
   <% @killers.each do | killer| %>
       <div class="card">
         <div class="card-body">
-          <%= cl_image_tag killer.photo.key, height: 300, width: 400, crop: :fill %>
+          <%# <%= cl_image_tag killer.photo.key, height: 300, width: 400, crop: :fill %>
           <h5 class="card-title"><strong><%= killer.alias %></strong></h5>
           <p class="card-text"><%= killer.name %> </p>
           <%= link_to "View Killer", killer_path(killer), class: "btn btn-danger" %>
