@@ -16,10 +16,6 @@ body {
   font-family: Raleway, sans-serif;
 }
 
-.test {
-  background-color: rgb(66, 65, 65);
-}
-
 .skull {
   border: 2px solid rgb(90, 10, 10);
   border-radius: 50%;
@@ -83,4 +79,25 @@ body {
   80%, 100% {
     transform: translateY(60vh) scaleX(.85) rotate(45deg);
   }
+}
+
+a {
+  text-decoration: none;
+  color: rgb(124, 12, 12);
+}
+
+
+p {
+  color: rgb(124, 12, 12);
+}
+
+h1 {
+  color: rgb(124, 12, 12);
+}
+h2 {
+  color: rgb(124, 12, 12);
+}
+
+label {
+  color: rgb(124, 12, 12);
 }
