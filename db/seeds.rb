@@ -13,15 +13,17 @@ nemesis = Killer.create!(
     alias: 'Nemesis',
     bio: 'The Nemesis is a Model T-103 Tyrant',
     location: 'Raccoon City',
-    price: 2000]
-)
+    price: 2000,
+    image: "app/assets/images/nemesis.jpeg"]
+  )
 the_executioner = Killer.create!(
   [ user_id: 1,
     name: "The Executioner",
     alias: "Pyramid Head",
     bio: "A sadistic and merciless executioner",
     location: "Raccoon City",
-    price: 2000]
+    price: 2000,
+    image: "app/assets/images/pyramid_head.png"]
   )
 
 freddy_krueger = Killer.create!(
@@ -30,7 +32,8 @@ freddy_krueger = Killer.create!(
     alias: "Freddy Krueger",
     bio: "Even while he lived, Freddy Krueger was a creature of nightmares",
     location: "Elm Street",
-    price: 200]
+    price: 2000,
+    image: "app/assets/images/freddy.jpeg"]
   )
 
 the_cannibal = Killer.create!(
@@ -39,7 +42,8 @@ the_cannibal = Killer.create!(
     alias: "Leatherface",
     bio: "placeholder",
     location: "Texas",
-    price: 500,]
+    price: 2000,
+    image: "app/assets/images/leatherface.jpeg"]
   )
 
 pinhead = Killer.create!(
@@ -48,7 +52,8 @@ pinhead = Killer.create!(
     alias: "Hell Priest",
     bio: "Pinhead is one of the leaders of the Cenobites, said to be humans who were later transformed into demonic creatures blindly devoted to the practice of experimental sadomasochism.",
     location: "Hell",
-    price: 666,]
+    price: 2000,
+    image: "app/assets/images/pinhead.jpeg"]
     )
 the_abomination = Killer.create!(
   [ user_id: 1,
@@ -56,7 +61,8 @@ the_abomination = Killer.create!(
     alias: "The Abomination ",
     bio: "The Taker of Souls is the incorporeal entity from another world.",
     location: "Summoned from Naturom Demonto",
-    price: 10000,]
+    price: 2000,
+    image: "app/assets/images/abomination.jpeg"]
   )
 
 the_demogorgon = Killer.create!(
@@ -65,7 +71,8 @@ the_demogorgon = Killer.create!(
     alias: "The Demogorgon",
     bio: "A blooming mouth full of needle-like teeth for a face, large, curved, razor-sharp claws, and powerful leg.",
     location: "Hawkins National Laboratory",
-    price: 40000,]
+    price: 2000,
+    image: "app/assets/images/demogorgon.jpeg"]
   )
 
 the_pig = Killer.create!(
@@ -74,7 +81,8 @@ the_pig = Killer.create!(
     alias: "The Pig",
     bio: "When John Kramer, better known as Jigsaw",
     location: "Somewhere in america",
-    price: 2000,]
+    price: 2000,
+    image: "app/assets/images/pig.jpeg"]
   )
 
 creeper = Killer.create!(
@@ -83,5 +91,6 @@ creeper = Killer.create!(
     alias: "Creeper",
     bio: "It is an ancient, mysterious demon, who seeks organs from humans to replace its own.",
     location: "North Central Florida",
-    price: 10000,]
+    price: 2000,
+    image: "app/assets/images/creeper.jpeg"]
   )
