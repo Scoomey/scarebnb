@@ -1,9 +1,11 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: #3d3b3b;
-  border-bottom: 3px solid #3d1111;
-}
+  background:transparent;
+  }
 
+.nav-link{
+  color: rgb(124, 12, 12) !important;
+  }
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
