@@ -32,7 +32,10 @@
       <%= f.input :abilities %>
       <%= f.input :location %>
       <%= f.input :photo, as: :file%>
-      <%= f.submit %>
+      <div class="button-container-3">
+      <span class="mas">Create Killer</span>
+      <button><%= f.submit class: "form-button white-text m-2"%></button>
+    </div>
     <% end %>
 
 

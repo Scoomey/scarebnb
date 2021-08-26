@@ -2,15 +2,18 @@
 
 
 <div class="container">
-    <%= simple_form_for [@spooking] do |f| %>
-      <%= f.error_notification %>
-      <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
-      <%= f.input :start_date, as: :date, html5: true %>
-      <%= f.input :end_date, as: :date, html5: true %>
-      <%= f.association :killer %>
-      <%= f.submit %>
-    <% end %>
+  <%= simple_form_for [@spooking] do |f| %>
+    <%= f.error_notification %>
+    <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+    <%= f.input :start_date, as: :date, html5: true %>
+    <%= f.input :end_date, as: :date, html5: true %>
+    <%= f.association :killer %>
+    <div class="button-container-3">
+      <span class="mas">Create Spooking</span>
+      <button><%= f.submit class: "form-button white-text m-2"%></button>
     </div>
+  <% end %>
+</div>
 
  <%= link_to root_path do %>
   <h1 class="glitch" data-text="back">
