@@ -8,8 +8,10 @@
         <div class="card-body">
           <h5 class="card-title"><strong><%= spooking.start_date %></strong></h5>
           <p class="card-text"><%= spooking.end_date %> </p>
-            <%= link_to "View spooking", spooking_path(spooking), class: "btn btn-danger" %>
-
+          <div class=" button-container-no-margin">
+            <span class="mas">View Spooking</span>
+            <button><%= link_to "View Spooking", spooking_path(spooking), class: "white-text mr-20" %></button>
+          </div>
         </div>
       </div>
   <% end %>
