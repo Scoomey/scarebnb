@@ -90,17 +90,10 @@ function animate() {
   }
 }
 
-
-export { animate };
-
-
 const previewImageOnFileSelect = () => {
-
   const input = document.getElementById('photo-input');
   if (input) {
-
     input.addEventListener('change', () => {
-
       displayPreview(input);
     })
   }
@@ -117,5 +110,4 @@ const displayPreview = (input) => {
   }
 }
 
-export { previewImageOnFileSelect };
-export { displayPreview };
+export { animate, previewImageOnFileSelect };
