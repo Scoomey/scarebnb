@@ -18,6 +18,10 @@
   <span class="drop"></span>
 </h1>
 
+<div id="map"
+     style="width: 100%; height: 600px;"
+     data-markers="<%= @markers.to_json %>"
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
 
 <div class="card-container">
   <% @killers.each do | killer| %>
@@ -31,6 +35,10 @@
       </div>
   <% end %>
 </div>
+
+
+
+
 
     <%= link_to root_path do %>
     <div class="back">
