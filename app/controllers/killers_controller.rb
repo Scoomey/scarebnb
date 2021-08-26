@@ -4,11 +4,11 @@ class KillersController < ApplicationController
   def index
     @killers = Killer.all
 
-     @markers = @killers.geocoded.map do |killer|
-      {
-        lat: killer.latitude,
-        lng: killer.longitude
-      }
+    @markers = @killers.geocoded.map do |killer|
+    {
+      lat: killer.latitude,
+      lng: killer.longitude
+    }
   end
 end
 

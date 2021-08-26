@@ -15,11 +15,15 @@
 </div>
 
 
-
+<% if current_user ===  @spooking.killer.user %>
 <div class="d-flex  justify-content-center ">
   <%= link_to "confirm spooking", confirmed_spooking_path(@spooking), method: :patch, class: "btn btn-danger mr-1 " %>
 <%= link_to "decline spooking", declined_spooking_path(@spooking), method: :patch, class: "btn btn-danger ml-1" %>
 </div>
+<% end %>
+
+
+
 
   <%= link_to root_path do %>
     <h1 class="glitch" data-text="back">
