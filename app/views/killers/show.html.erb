@@ -52,9 +52,9 @@
 <div><%= link_to 'Book this killer', new_spooking_path, class: "btn btn-danger mt-4" %></div>
 
 
-
-    <%= link_to killers_path do %>
-    <div class="back">
-      <h1 class="glitch" data-text="back"> </h1>
-      </div>
-    <% end %>
+ <%= link_to killers_path do %>
+  <h1 class="glitch" data-text="back">
+    <%= link_to "back", killers_path %>
+    </h1>
+    </div>
+<% end %>
