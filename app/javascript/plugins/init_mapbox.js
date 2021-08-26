@@ -8,8 +8,9 @@ const initMapbox = () => {
     mapboxgl.accessToken = mapElement.dataset.mapboxApiKey;
     const map = new mapboxgl.Map({
       container: 'map',
-      style: 'mapbox://styles/mohamed-khadar/ckssvake13hho17o744ocjgiy/draft'
+      style: 'mapbox://styles/mohamed-khadar/ckst0930k3q3u17qh61sohq8d/draft'
     });
+    map.dragRotate.disable()
     const markers = JSON.parse(mapElement.dataset.markers);
     markers.forEach((marker) => {
       new mapboxgl.Marker()
