@@ -27,9 +27,7 @@ import "bootstrap";
 
 import { initMapbox } from '../plugins/init_mapbox';
 
-import { animate } from './components/tagline';
-
-import { previewImageOnFileSelect } from './components/tagline';
+import { animate, previewImageOnFileSelect } from './components/tagline';
 
 
 
