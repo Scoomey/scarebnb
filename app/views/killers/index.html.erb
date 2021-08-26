@@ -23,11 +23,9 @@
   <% @killers.each do | killer| %>
       <div class="card">
         <div class="card-body">
-        <%= if  !killer.photo.key nil? %>
-          <%= cl_image_tag killer.photo.key, height: 100, width: 50, crop: :fill %>
-          <%= else %>
-          <h5 class="card-title"><strong><%= killer.alias %></strong></h5>
-          <p class="card-text"><%= killer.name %> </p>
+          <%= cl_image_tag(killer.photo.key, :transformation=>[ {:width=>250, :crop=>"scale"}]) %>
+          <h3 class="card-title"><strong><%= killer.alias %></strong></h3>
+          <h3 class="card-text"><%= killer.name %> </h3>
           <%= link_to "View Killer", killer_path(killer), class: "btn btn-danger" %>
         </div>
       </div>
