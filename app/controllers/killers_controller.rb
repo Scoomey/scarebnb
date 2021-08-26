@@ -40,6 +40,6 @@ class KillersController < ApplicationController
   end
 
   def killer_params
-    params.require(:killer).permit(:user_id, :name, :bio, :price, :weapon, :abilities, :location, :alias)
+    params.require(:killer).permit(:user_id, :name, :bio, :price, :weapon, :abilities, :location, :alias, :photo)
   end
 end
