@@ -29,6 +29,10 @@ import { initMapbox } from '../plugins/init_mapbox';
 
 import { animate } from './components/tagline';
 
+import { previewImageOnFileSelect } from './components/tagline';
+
+
+
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 
@@ -39,5 +43,7 @@ document.addEventListener('turbolinks:load', () => {
   initMapbox();
 
   animate();
+
+  previewImageOnFileSelect();
 
 });
