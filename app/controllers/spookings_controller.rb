@@ -1,7 +1,7 @@
 class SpookingsController < ApplicationController
-  before_action :set_spooking, only: [:show, :update, :edit, :destroy]
+  before_action :set_spooking, only: [:show, :update, :edit, :destroy, :confirmed, :declined]
   def index
-    @spooking = Spooking.all
+    @spooking = Spooking.where(user: current_user)
   end
 
   def show; end
@@ -30,13 +30,13 @@ class SpookingsController < ApplicationController
     @spooking.destroy
   end
 
-  def confirm
+  def confirmed
     @spooking.status = "confirmed"
     @spooking.save
     redirect_to spookings_path
   end
 
-  def decline
+  def declined
     spooking.status = "declined"
     spooking.save
     redirect_to spookings_path
