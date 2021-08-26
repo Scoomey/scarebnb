@@ -20,3 +20,9 @@
       <h1 class="glitch" data-text="back"> </h1>
       </div>
     <% end %>
+
+
+ <%= link_to "confirm spooking", confirmed_spooking_path(@spooking), method: :post %>
+
+
+     <%= link_to "decline spooking", declined_spooking_path(@spooking), method: :post %>

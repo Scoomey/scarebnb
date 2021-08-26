@@ -8,10 +8,6 @@
   </defs>
 </svg>
 
-<div>
-   <%= cl_image_tag(@killer.photo.key, :transformation=>[ {:width=>350, :crop=>"scale"}, {:fetch_format=>:auto},{:radius=>"max"},{:background=>"transparent"}]) %>
-</div>
-
 <h1 class="title">
    <%= @killer.alias %>
   <span class="drop"></span>
@@ -22,6 +18,9 @@
 </h1>
 
 
+<div>
+   <%= cl_image_tag(@killer.photo.key, :transformation=>[ {:width=>350, :crop=>"scale"}, {:fetch_format=>:auto},{:radius=>"max"},{:background=>"transparent"}]) %>
+</div>
 
 
 
