@@ -8,6 +8,10 @@
   </defs>
 </svg>
 
+<div>
+   <%= cl_image_tag(@killer.photo.key, :transformation=>[ {:width=>350, :crop=>"scale"}, {:fetch_format=>:auto},{:radius=>"max"},{:background=>"transparent"}]) %>
+</div>
+
 <h1 class="title">
    <%= @killer.alias %>
   <span class="drop"></span>
@@ -26,25 +30,26 @@
 <div class="card mt-5">
 
   <div class="py-3">
-    <h3><%= @killer.name %></h3>
-    <h4>£<%= @killer.price %></h4>
+    <h2><strong><%= @killer.name %></strong></h2>
+    <h2><i>£<%= @killer.price %></i></h2>
   </div>
-<h4>Bio:</h4>
+
   <div class="">
-  <h4><%= @killer.bio %></h4>
+  <h3><%= @killer.bio %></h3>
+  <br>
   </div>
 
    <div class="">
-  <h4>Weapon:<%= @killer.weapon %></h4>
+  <h4><strong>Weapon: </strong> <%= @killer.weapon %></h4>
   </div>
    <div class="">
-  <h4>Abilities:<%= @killer.abilities   %></h4>
+  <h4><strong>Abilities: </strong> <%= @killer.abilities %></h4>
   </div>
 
 
 
   <div class="">
-  <p><%= @killer.location %></p>
+  <h4><strong><u>Location: </strong><%= @killer.location %></u></h4>
   </div>
 
 </div>
