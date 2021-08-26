@@ -70,7 +70,7 @@ html, body {
 
 .sub {
 	color: red;
-	letter-spacing: 1em;
+  letter-spacing: 1em;
   font-size: 30px;
 }
 
@@ -93,7 +93,7 @@ text set in the data-text attribute. */
 .glitch {
   a {
     text-decoration: none ;
-    color: transparent;
+    color: rgb(90, 10, 10)  ;
     &:hover{
       color: whitesmoke;
     }
@@ -101,7 +101,7 @@ text set in the data-text attribute. */
 	position: relative;
 	color: white;
 	font-size: 4em;
-	letter-spacing: .5em;
+	letter-spacing: .3em;
 	/* Animation provies a slight random skew. Check bottom of doc
 	for more information on how to random skew. */
 	animation: glitch-skew 1s infinite linear alternate-reverse;
@@ -165,4 +165,102 @@ skew to change the 'thickness' of the glitch.*/
       transform: skew((random(10) - 5) + deg);
     }
   }
+}
+
+// Blood-effect button
+  @mixin button($bcolor,
+$url,
+$x1,
+$y1,
+$bor,
+$col) {
+ background: $bcolor;
+ -webkit-mask: url($url);
+ mask: url($url);
+ -webkit-mask-size: $x1 $y1;
+ mask-size: $x1 $y1;
+ border: $bor;
+ color: $col;
+}
+
+.mas {
+    position: absolute;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    font-weight: 300;
+    font-size: 15px;
+    margin-top: 13px;
+    overflow: hidden;
+	  font-weight: bold;
+}
+
+.white-text {
+  color: white;
+}
+
+@keyframes ani {
+ from {
+  -webkit-mask-position: 0 0;
+  mask-position: 0 0;
+ }
+
+ to {
+  -webkit-mask-position: 100% 0;
+  mask-position: 100% 0;
+ }
+}
+
+@keyframes ani2 {
+ from {
+  -webkit-mask-position: 100% 0;
+  mask-position: 100% 0;
+ }
+
+ to {
+  -webkit-mask-position: 0 0;
+  mask-position: 0 0;
+ }
+}
+
+.button-container-3 {
+ position: relative;
+ width: 200px;
+ height: 50px;
+ margin-left: auto;
+ margin-right: auto;
+ margin-top: 8vh;
+ overflow: hidden;
+ border: 1px solid #000;
+ font-weight: 300;
+ transition: 0.5s;
+ letter-spacing: 1px;
+ border-radius: 8px;
+ background-color: #000;
+
+ button {
+  width: 101%;
+  height: 100%;
+  font-family: Raleway, sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  color: #fff !important;
+
+  @include button(#7d0d0d, "https://raw.githubusercontent.com/pizza3/asset/master/natureSmaller.png",
+  7100%,
+  100%,
+  none,
+  #000);
+  cursor: pointer;
+  -webkit-animation: ani2 0.7s steps(70) forwards;
+  animation: ani2 0.7s steps(70) forwards;
+  color: #fff !important;
+
+  &:hover {
+   -webkit-animation: ani 0.7s steps(70) forwards;
+   animation: ani 0.7s steps(70) forwards;
+  }
+ }
 }

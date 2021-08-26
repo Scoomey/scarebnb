@@ -18,14 +18,41 @@
   <span class="drop"></span>
 </h1>
 
-<div>
-<%= link_to 'Spook Someone', new_spooking_path, class: "btn btn-danger m-2"%>
+<!-- Explanation in JS tab -->
+
+<!-- The two texts -->
+<div id="container">
+	<span id="text1"></span>
+	<span id="text2"></span>
 </div>
 
-<div>
- <%= link_to 'Killer Gallery', killers_path, class: "btn btn-danger m-2"%>
+<!-- TAGLINE -->
+<!-- The SVG filter used to create the merging effect -->
+<svg id="filters">
+	<defs>
+		<filter id="threshold">
+			<!-- Basically just a threshold effect - pixels with a high enough opacity are set to full opacity, and all other pixels are set to completely transparent. -->
+			<feColorMatrix in="SourceGraphic"
+					type="matrix"
+					values="1 0 0 0 0
+									0 1 0 0 0
+									0 0 1 0 0
+									0 0 0 255 -140" />
+		</filter>
+	</defs>
+</svg>
+
+<div class="button-container-3">
+  <span class="mas">Spook Someone</span>
+ <button><%= link_to 'Spook Someone', new_spooking_path, class: "white-text m-2"%></button>
 </div>
 
-<div>
- <%= link_to 'Add Killer', new_killer_path, class: "btn btn-danger m-2"%>
+<div class="button-container-3">
+  <span class="mas">Killer Gallery</span>
+ <button><%= link_to 'Killer Gallery', killers_path, class: "white-text m-2"%></button>
+</div>
+
+<div class="button-container-3">
+<span class="mas">Add Killer</span>
+ <button><%= link_to 'Add Killer', new_killer_path, class: "white-text m-2"%></button>
 </div>

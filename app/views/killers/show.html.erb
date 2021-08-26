@@ -9,7 +9,7 @@
 </svg>
 
 <h1 class="title">
-   <%= @killer.name %>
+   <%= @killer.alias %>
   <span class="drop"></span>
   <span class="drop"></span>
   <span class="drop"></span>
@@ -18,6 +18,9 @@
 </h1>
 
 
+<div>
+   <%= cl_image_tag(@killer.photo.key, :transformation=>[ {:width=>350, :crop=>"scale"}, {:fetch_format=>:auto},{:radius=>"max"},{:background=>"transparent"}]) %>
+</div>
 
 
 
@@ -26,16 +29,26 @@
 <div class="card mt-5">
 
   <div class="py-3">
-    <h3><%= @killer.alias %></h3>
-    <h4>£<%= @killer.price %></h4>
+    <h2><strong><%= @killer.name %></strong></h2>
+    <h2><i>£<%= @killer.price %></i></h2>
   </div>
 
   <div class="">
-  <p><%= @killer.bio %></p>
+  <h3><%= @killer.bio %></h3>
+  <br>
   </div>
 
+   <div class="">
+  <h4><strong>Weapon: </strong> <%= @killer.weapon %></h4>
+  </div>
+   <div class="">
+  <h4><strong>Abilities: </strong> <%= @killer.abilities %></h4>
+  </div>
+
+
+
   <div class="">
-  <p><%= @killer.location %></p>
+  <h4><strong><u>Location: </strong><%= @killer.location %></u></h4>
   </div>
 
 </div>
@@ -43,9 +56,9 @@
 <div><%= link_to 'Book this killer', new_spooking_path, class: "btn btn-danger mt-4" %></div>
 
 
-
-    <%= link_to killers_path do %>
-    <div class="back">
-      <h1 class="glitch" data-text="back"> </h1>
-      </div>
-    <% end %>
+ <%= link_to killers_path do %>
+  <h1 class="glitch" data-text="back">
+    <%= link_to "back", killers_path %>
+    </h1>
+    </div>
+<% end %>

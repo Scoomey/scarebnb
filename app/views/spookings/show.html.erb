@@ -1,11 +1,15 @@
-<h2 class="mt-5">My New Spooking</h2>
+<h1 class="mt-5">My New Spooking</h1>
 <div class="container mt-5">
   <div>
-    <%# <% @spooking.each do |spooking| %>
-      <h4><%= @spooking.killer.name %></h4>
-      <p><%= @spooking.start_date %></p>
-      <p><%= @spooking.end_date %></p>
-    <%# <% end %>
+      <h3><%= @spooking.killer.name %></h3>
+      <h3><%= @spooking.killer.alias %></h3>
+      <div>
+      <% if @spooking.killer.photo.attached? %>
+        <%= cl_image_tag(@spooking.killer.photo.key, :transformation=>[ {:width=>350, :crop=>"scale"}, {:fetch_format=>:auto},{:radius=>"max"},{:background=>"transparent"}]) %>
+      <% end %>
+      </div>
+      <h3>From: <%= @spooking.start_date %></h3>
+      <h3>To: <%= @spooking.end_date %></h3>
   </div>
 </div>
 
@@ -16,3 +20,9 @@
       <h1 class="glitch" data-text="back"> </h1>
       </div>
     <% end %>
+
+
+ <%= link_to "confirm spooking", confirmed_spooking_path(@spooking), method: :post %>
+
+
+     <%= link_to "decline spooking", declined_spooking_path(@spooking), method: :post %>
