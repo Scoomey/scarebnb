@@ -37,8 +37,8 @@ class SpookingsController < ApplicationController
   end
 
   def declined
-    spooking.status = "declined"
-    spooking.save
+    @spooking.status = "declined"
+    @spooking.save
     redirect_to spookings_path
   end
 
