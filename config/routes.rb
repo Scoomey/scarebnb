@@ -9,9 +9,6 @@ Rails.application.routes.draw do
     resources :spookings, only: [:index,:show, :create]
   end
   resources :spookings do
-    member {patch :confirmed, :declined}
-      # patch "confirmed", to: "spookings#confirmed"
-      # patch "declined", to: "spookings#declined"
-    # end
+    member { patch :confirmed, :declined }
   end
 end

@@ -1,7 +1,8 @@
 class SpookingsController < ApplicationController
   before_action :set_spooking, only: [:show, :update, :edit, :destroy, :confirmed, :declined]
   def index
-    @spooking = Spooking.where(user: current_user)
+    @spooking = Spooking.joins(:killer).where(user: current_user)
+                        .or(Spooking.joins(:killer).where(killers: { user: current_user }))
   end
 
   def show; end
@@ -38,7 +39,7 @@ class SpookingsController < ApplicationController
 
   def declined
     @spooking.status = "declined"
-    @spooking.save
+    @spooking.destroy
     redirect_to spookings_path
   end
 
