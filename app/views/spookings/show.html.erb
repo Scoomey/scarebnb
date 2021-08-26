@@ -1,28 +1,28 @@
-<h1 class="mt-5">My New Spooking</h1>
-<div class="container mt-5">
+
+<%= render 'shared/blood',title: "Your spooking with" %>
+
+<div class="container ">
   <div>
-      <h3><%= @spooking.killer.name %></h3>
-      <h3><%= @spooking.killer.alias %></h3>
-      <div>
+      <%= render 'shared/blood',title: @spooking.killer.alias %>
+        <div>
       <% if @spooking.killer.photo.attached? %>
-        <%= cl_image_tag(@spooking.killer.photo.key, :transformation=>[ {:width=>350, :crop=>"scale"}, {:fetch_format=>:auto},{:radius=>"max"},{:background=>"transparent"}]) %>
+        <%= cl_image_tag(@spooking.killer.photo.key, :transformation=>[ {:width=>250, :crop=>"scale"}, {:fetch_format=>:auto},{:radius=>"max"},{:background=>"transparent"}]) %>
       <% end %>
       </div>
-      <h3>From: <%= @spooking.start_date %></h3>
-      <h3>To: <%= @spooking.end_date %></h3>
+      <h2>From: <%= @spooking.start_date %></h2>
+      <h2>To: <%= @spooking.end_date %></h2>
   </div>
 </div>
 
 
 
-    <%= link_to spookings_path do %>
-    <div class="back">
-      <h1 class="glitch" data-text="back"> </h1>
-      </div>
+<div class="d-flex  justify-content-center ">
+  <%= link_to "confirm spooking", confirmed_spooking_path(@spooking), method: :patch, class: "btn btn-danger mr-1 " %>
+<%= link_to "decline spooking", declined_spooking_path(@spooking), method: :patch, class: "btn btn-danger ml-1" %>
+</div>
+
+  <%= link_to root_path do %>
+    <h1 class="glitch" data-text="back">
+      <%= link_to "back", root_path %>
+      </h1>
     <% end %>
-
-
- <%= link_to "confirm spooking", confirmed_spooking_path(@spooking), method: :post %>
-
-
-     <%= link_to "decline spooking", declined_spooking_path(@spooking), method: :post %>

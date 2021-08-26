@@ -22,9 +22,10 @@ let textIndex = texts.length - 1;
 let time = new Date();
 let morph = 0;
 let cooldown = cooldownTime;
-
-elts.text1.textContent = texts[textIndex % texts.length];
-elts.text2.textContent = texts[(textIndex + 1) % texts.length];
+if (elts.text1 && elts.text2) {
+  elts.text1.textContent = texts[textIndex % texts.length];
+  elts.text2.textContent = texts[(textIndex + 1) % texts.length];
+}
 
 function doMorph() {
   morph -= cooldown;
@@ -67,23 +68,25 @@ function doCooldown() {
 
 // Animation loop, which is called every frame.
 function animate() {
-  requestAnimationFrame(animate);
+  if (document.getElementById("text1") && document.getElementById("text2")) {
+    requestAnimationFrame(animate);
 
-  let newTime = new Date();
-  let shouldIncrementIndex = cooldown > 0;
-  let dt = (newTime - time) / 1000;
-  time = newTime;
+    let newTime = new Date();
+    let shouldIncrementIndex = cooldown > 0;
+    let dt = (newTime - time) / 1000;
+    time = newTime;
 
-  cooldown -= dt;
+    cooldown -= dt;
 
-  if (cooldown <= 0) {
-    if (shouldIncrementIndex) {
-      textIndex++;
+    if (cooldown <= 0) {
+      if (shouldIncrementIndex) {
+        textIndex++;
+      }
+
+      doMorph();
+    } else {
+      doCooldown();
     }
-
-    doMorph();
-  } else {
-    doCooldown();
   }
 }
 
