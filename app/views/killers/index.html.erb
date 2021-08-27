@@ -1,4 +1,4 @@
-
+<body style="background-image: url(<%= asset_url('spooky_hallway.jpeg')%>);">
 <%= render 'shared/blood',title: "Available killers!" %>
 
 
@@ -35,13 +35,15 @@
   </div>
 
 </div>
-</body>
+
 
 <div class="index-glitch">
   <%= link_to root_path do %>
   <h1 class="glitch" data-text="back">
+
   <%= link_to "back", root_path %>
   </h1>
   </div>
   <% end %>
 </div>
+
