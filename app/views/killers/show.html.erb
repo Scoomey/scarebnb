@@ -1,4 +1,6 @@
+
 <%= render 'shared/blood',title: @killer.name  %>
+
 
 
 
@@ -33,6 +35,7 @@
   <button><%= link_to 'Book this killer', new_spooking_path, class: "white-text mt-4"%></button>
 </div>
 
+
 <%# back button %>
     <%= link_to killers_path do %>
       <h1 class="glitch" data-text="back">
@@ -40,3 +43,4 @@
         </h1>
         </div>
     <% end %>
+
