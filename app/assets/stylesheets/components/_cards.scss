@@ -6,10 +6,9 @@
 }
 
 .card {
-  border-radius: 5%;
+  border-radius: 8%;
   color: rgb(167, 54, 54);
-
-  background-color: rgba($color: #696969, $alpha: 0.4);
+  background-color: rgba($color: #ffffff, $alpha: 0.4);
   width: 220px;
   margin-bottom: 20px;
 }
@@ -20,6 +19,7 @@
 }
 
 .card-body img {
+  border-radius: 10%;
 
   width: 200px;
 }
@@ -33,7 +33,7 @@
 .map-position{
   width: 70%;
   position: sticky;
-  top: 100px;
+  top: 0px;
 }
 
 .card-positions {
