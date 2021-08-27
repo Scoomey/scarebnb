@@ -41,6 +41,20 @@
 		</filter>
 	</defs>
 </svg>
+<div class="mt-4">
+  <div class="row">
+    <div class="col-6 m-auto">
+    <%= form_tag killers_path, method: :get do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        placeholder: "Find a killer"
+      %>
+      <%= submit_tag "Search", class: "btn btn-danger" %>
+    <% end %>
+      </div>
+    </div>
+</div>
 
 <div class="button-container-3">
   <span class="mas">Spook Someone</span>
