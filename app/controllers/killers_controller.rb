@@ -2,15 +2,18 @@ class KillersController < ApplicationController
   before_action :set_killer, only: [:show, :edit, :update, :destroy]
 
   def index
-    @killers = Killer.all
-
+    if params[:query].present?
+      @killers = Killer.search_by_name_and_alias(params[:query])
+    else
+      @killers = Killer.all
+    end
     @markers = @killers.geocoded.map do |killer|
-    {
-      lat: killer.latitude,
-      lng: killer.longitude
-    }
+      {
+        lat: killer.latitude,
+        lng: killer.longitude
+      }
+    end
   end
-end
 
   def new
     @killer = Killer.new
