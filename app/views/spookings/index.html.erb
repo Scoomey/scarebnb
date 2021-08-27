@@ -2,8 +2,8 @@
 <%= render 'shared/blood',title: "Your Spookings!" %>
 
 
-
-<div class="card-container">
+<div class="spookingcontainer">
+  <div class="card-container">
   <% @spooking.each do | spooking| %>
       <div class="card">
         <div class="card-body">
@@ -16,6 +16,8 @@
         </div>
       </div>
   <% end %>
+</div>
+
 </div>
 
   <%= link_to root_path do %>
