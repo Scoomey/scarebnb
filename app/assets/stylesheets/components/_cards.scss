@@ -8,3 +8,27 @@
   border-radius: 5%;
   color: rgb(167, 54, 54);
 background-color: rgba($color: #696969, $alpha: 0.4);}
+
+.spooking-show-container {
+  width: 350px;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.spooking-show-card {
+  padding: 10px;
+  h2 {
+    font-family: Raleway, sans-serif;
+  }
+  h4 {
+    font-family: Raleway, sans-serif;
+    color: #7d0d0d;
+  }
+  font-weight: bolder;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  transition: all .2s ease-in-out;
+  &:hover {
+    transform: scale(1.1);
+  }
+}

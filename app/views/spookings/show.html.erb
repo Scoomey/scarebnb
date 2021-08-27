@@ -9,8 +9,13 @@
         <%= cl_image_tag(@spooking.killer.photo.key, :transformation=>[ {:width=>250, :crop=>"scale"}, {:fetch_format=>:auto},{:radius=>"max"},{:background=>"transparent"}]) %>
       <% end %>
       </div>
-      <h2>From: <%= @spooking.start_date %></h2>
-      <h2>To: <%= @spooking.end_date %></h2>
+      <div class="spooking-show-container">
+        <div class="spooking-show-card">
+          <h2>From: <%= @spooking.start_date %></h2>
+          <h2>To: <%= @spooking.end_date %></h2>
+          <h4><%= @spooking.status %></h4>
+        </div>
+      </div>
   </div>
 </div>
 
