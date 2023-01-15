@@ -48,26 +48,26 @@
       <%= text_field_tag :query,
         params[:query],
         class: "form-control",
-        placeholder: "Find a killer"
+        placeholder: "Find Spooks near you!"
       %>
-      <%= submit_tag "Search Killers", class: "btn btn-danger white-text" %>
+      <%= submit_tag "View our Spooks", class: "btn btn-danger white-text" %>
     <% end %>
       </div>
     </div>
 </div>
 
 <div class="button-container-3">
-  <span class="mas">Spook Someone</span>
- <button><%= link_to 'Spook Someone', new_spooking_path, class: "white-text m-2"%></button>
+  <span class="mas">Books a Spooking!</span>
+ <button><%= link_to 'Books a Spooking!', new_spooking_path, class: "white-text m-2"%></button>
 </div>
 
 <div class="button-container-3">
-  <span class="mas">Killer Gallery</span>
- <button><%= link_to 'Killer Gallery', killers_path, class: "white-text m-2"%></button>
+  <span class="mas">Spooks Gallery</span>
+ <button><%= link_to 'Spooks Gallery', killers_path, class: "white-text m-2"%></button>
 </div>
 
 <div class="button-container-3">
-<span class="mas">Add Killer</span>
- <button><%= link_to 'Add Killer', new_killer_path, class: "white-text m-2"%></button>
+<span class="mas">Add a Spook</span>
+ <button><%= link_to 'Add a Spook', new_killer_path, class: "white-text m-2"%></button>
 </div>
 </body>

@@ -9,9 +9,8 @@ const elts = {
 
 // The strings to morph between. You can change these to anything you want!
 const texts = [
-  "Hire a killer.",
-  "Stalk your friends.",
-  "Create a spook.",
+  "Hire a Spook, to Spook your friends!",
+  "Make £££ from your \"Spooky Skills\"!",
 ];
 
 // Controls the speed of morphing.

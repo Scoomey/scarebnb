@@ -8,22 +8,23 @@
 }
 
 .killer-form {
- width: 500px;
- margin: auto;
+  width: 500px;
+  margin: auto;
 }
 
 .form-control {
-  background-color: rgb(53, 52, 52) ;
-  border:2px solid rgb(90, 10, 10);
+  background-color: rgb(53, 52, 52);
+  border: 2px solid rgb(90, 10, 10);
 }
 
-.btn{
+.btn {
   margin-top: 4px;
   border-radius: 8px !important;
   width: 193px !important;
   height: 47px !important;
-  border:1px black solid ;
+  border: 1px black solid;
 }
+
 body {
   // background-image: url("spooky_hallway.jpeg");
   background-size: 100%;
@@ -44,17 +45,18 @@ body {
 
 .title {
   font-weight: 1000;
-  font-size: 80px;
+  font-size: 3rem;
   margin: 0 auto;
   filter: url(#goo);
   position: relative;
-  letter-spacing: -.04em;
+  letter-spacing: 0.3rem;
   color: rgb(124, 12, 12);
   text-transform: uppercase;
 }
 
 .drop {
-  width: .1em; height: .1em;
+  width: .1em;
+  height: .1em;
   border-radius: 0 100% 100% 100%;
   background-color: currentColor;
   position: absolute;
@@ -91,11 +93,14 @@ body {
     transform: translateY(0) scaleX(.85) rotate(45deg);
     animation-timing-function: ease-out;
   }
+
   60% {
     transform: translateY(120%) scaleX(.85) rotate(45deg);
     animation-timing-function: ease-in;
   }
-  80%, 100% {
+
+  80%,
+  100% {
     transform: translateY(60vh) scaleX(.85) rotate(45deg);
   }
 }
@@ -107,12 +112,14 @@ a {
 
 
 p {
-  color:#a73636;;
+  color: #a73636;
+  ;
 }
 
 h1 {
   color: rgb(124, 12, 12);
 }
+
 h2 {
   color: rgb(124, 12, 12);
 }
@@ -131,7 +138,9 @@ label {
 
 .container {
 
-max-width: 1400px
+  max-width: 1400px;
+  height: 0.5rem;
+  // align-items: flex-start;
 }
 
 .index-glitch {
