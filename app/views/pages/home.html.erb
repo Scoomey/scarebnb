@@ -1,73 +1,27 @@
-<body style="background-image: url(<%= asset_url('spooky_forest.jpeg')%>); background-attachment: fixed; background-repeat: no-repeat; background-size: cover;">
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="width: 0;height: 0;">
-  <defs>
-    <filter id="goo">
-      <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur" />
-      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
-      <feBlend in="SourceGraphic" in2="goo" />
-    </filter>
-  </defs>
-</svg>
+<body
+  style="background-image: url(<%= asset_url('spooky_forest.jpeg')%>); background-attachment: fixed; background-repeat: no-repeat; background-size: cover;">
 
-<h1 class="title">
-  Welcome to SCAREBNB!
-  <span class="drop"></span>
-  <span class="drop"></span>
-  <span class="drop"></span>
-  <span class="drop"></span>
-  <span class="drop"></span>
-</h1>
-
-<!-- Explanation in JS tab -->
-
-<!-- The two texts -->
-<div id="container">
-	<span id="text1"></span>
-	<span id="text2"></span>
-</div>
-
-<!-- TAGLINE -->
-<!-- The SVG filter used to create the merging effect -->
-<svg id="filters">
-	<defs>
-		<filter id="threshold">
-			<!-- Basically just a threshold effect - pixels with a high enough opacity are set to full opacity, and all other pixels are set to completely transparent. -->
-			<feColorMatrix in="SourceGraphic"
-					type="matrix"
-					values="1 0 0 0 0
-									0 1 0 0 0
-									0 0 1 0 0
-									0 0 0 255 -140" />
-		</filter>
-	</defs>
-</svg>
-<div class="mt-4">
-  <div class="row">
-    <div class="col-6 m-auto">
-    <%= form_tag killers_path, method: :get do %>
-      <%= text_field_tag :query,
-        params[:query],
-        class: "form-control",
-        placeholder: "Find Spooks near you!"
-      %>
-      <%= submit_tag "View our Spooks", class: "btn btn-danger white-text" %>
-    <% end %>
+  <div id="container">
+    <h1 class="title">
+      Welcome to SCAREBNB!
+    </h1>
+    <div class="mt-4">
+      <div class="row">
+        <div class="col-6 m-auto">
+          <%= form_tag killers_path, method: :get do %>
+          <%= text_field_tag :query,
+            params[:query],
+            class: "form-control",
+            placeholder: "Find Spooks near you!"
+          %>
+          <%= submit_tag "Search", class: "btn btn-danger white-text" %>
+          <% end %>
+        </div>
       </div>
+    <div class="button-container">
+      <button><%= link_to 'Books a Spooking!', new_spooking_path, class: "btn btn-danger white-text"%></button>
+      <button><%= link_to 'Spooks Gallery', killers_path, class: "btn btn-danger white-text"%></button>
+      <button><%= link_to 'Add a Spook', new_killer_path, class: "btn btn-danger white-text"%></button>
     </div>
-</div>
-
-<div class="button-container-3">
-  <span class="mas">Books a Spooking!</span>
- <button><%= link_to 'Books a Spooking!', new_spooking_path, class: "white-text m-2"%></button>
-</div>
-
-<div class="button-container-3">
-  <span class="mas">Spooks Gallery</span>
- <button><%= link_to 'Spooks Gallery', killers_path, class: "white-text m-2"%></button>
-</div>
-
-<div class="button-container-3">
-<span class="mas">Add a Spook</span>
- <button><%= link_to 'Add a Spook', new_killer_path, class: "white-text m-2"%></button>
-</div>
+  </div>
 </body>

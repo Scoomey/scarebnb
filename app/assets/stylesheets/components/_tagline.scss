@@ -1,45 +1,15 @@
 body {
-	// margin: 0px auto;
   font-family: Raleway, sans-serif;
   text-align: center;
 }
 
-#container {
-	/* Center the text in the viewport. */
-	// position: relative;
-	margin: 0 auto;
-  margin-left: -20vw;
-  margin-bottom: 0;
-  padding-bottom: 0;
-  text-align: center;
-	// width: 100vw;
-	// height: 30pt;
-	// top: 0;
-	// bottom: 0;
-
-	/* This filter is a lot of the magic, try commenting it out to see how the morphing works! */
-	filter: url(#threshold) blur(0.6px);
-}
-
-#filters {
-  padding-bottom: 0;
-  margin-bottom: 0;
-  height: 50px;
-}
-
-/* Your average text styling */
-#text1, #text2 {
-	position: absolute;
-	width: 100%;
-  margin-left: -38vw;
-	// display: inline-block;
-
+#text1,
+#text2 {
+  width: 100%;
   font-family: Raleway, sans-serif;
-	font-size: 30pt;
+  font-size: 30pt;
   font-weight: bolder;
-	color: #7d0d0d;
-
-	text-align: center;
-
-	user-select: none;
+  color: #7d0d0d;
+  text-align: center;
+  user-select: none;
 }

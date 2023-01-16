@@ -1,13 +1,13 @@
 <body style="background-image: url(<%= asset_url('spooky_hallway.jpeg')%>);">
-<%= render 'shared/blood',title: "Your spooking with" %>
+  <%= render 'shared/blood',title: "Your spooking with" %>
 
-<div class="container ">
-  <div>
+  <div class="container ">
+    <div>
       <%= render 'shared/blood',title: @spooking.killer.alias %>
-        <div>
-      <% if @spooking.killer.photo.attached? %>
+      <div>
+        <% if @spooking.killer.photo.attached? %>
         <%= cl_image_tag(@spooking.killer.photo.key, :transformation=>[ {:width=>250, :crop=>"scale"}, {:fetch_format=>:auto},{:radius=>"max"},{:background=>"transparent"}]) %>
-      <% end %>
+        <% end %>
       </div>
       <div class="spooking-show-container">
         <div class="spooking-show-card">
@@ -16,26 +16,26 @@
           <h4><%= @spooking.status %></h4>
         </div>
       </div>
+    </div>
   </div>
-</div>
 
 
-<% if current_user ===  @spooking.killer.user %>
-<div style="width:450px;margin:0 auto;" class="d-flex  justify-content-center">
-  <div class=" button-container-no-margin">
-    <span class="mas">Confirm Spooking</span>
-    <button><%= link_to "Confirm Spooking", confirmed_spooking_path(@spooking), method: :patch, class: "white-text mr-20" %></button>
+  <% if current_user ===  @spooking.killer.user %>
+  <div style="width:450px;margin:0 auto;" class="d-flex  justify-content-center">
+    <div class=" button-container-no-margin">
+      <span class="mas">Confirm Spooking</span>
+      <button><%= link_to "Confirm Spooking", confirmed_spooking_path(@spooking), method: :patch, class: "white-text mr-20" %></button>
+    </div>
+    <div class="button-container-no-margin">
+      <span class="mas">Decline Spooking</span>
+      <button><%= link_to "Decline Spooking", declined_spooking_path(@spooking), method: :patch, class: "white-text ml-20" %></button>
+    </div>
   </div>
-  <div class="button-container-no-margin">
-    <span class="mas">Decline Spooking</span>
-    <button><%= link_to "Decline Spooking", declined_spooking_path(@spooking), method: :patch, class: "white-text ml-20" %></button>
-  </div>
-</div>
-<% end %>
+  <% end %>
 
   <%= link_to root_path do %>
-    <h1 class="glitch" data-text="back">
-      <%= link_to "back", root_path %>
-      </h1>
-    <% end %>
+  <h1 class="glitch" data-text="back">
+    <%= link_to "back", root_path %>
+  </h1>
+  <% end %>
 </body>

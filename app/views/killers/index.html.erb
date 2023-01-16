@@ -1,12 +1,6 @@
 <body style="background-image: url(<%= asset_url('spooky_hallway.jpeg')%>);">
 <%= render 'shared/blood',title: "Available killers!" %>
 
-
-
-
-
-
-
 <div class="map-container">
 <div class="card-positions">
     <% @killers.each do | killer| %>
@@ -46,4 +40,3 @@
   </div>
   <% end %>
 </div>
-
