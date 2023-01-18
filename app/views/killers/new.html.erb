@@ -1,37 +1,31 @@
 <body style="background-image: url(<%= asset_url('spooky_hallway.jpeg')%>);">
-<%= render 'shared/blood',title: "Add your killer!" %>
+  <%= render 'shared/blood',title: "Sell your spooky skills!" %>
 
 
 
-<div class="container">
-<div class="killer-form">
-    <%= simple_form_for [@killer] do |f| %>
+  <div class="container">
+    <div class="killer-form">
+      <%= simple_form_for [@killer] do |f| %>
       <%= f.error_notification %>
       <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
-      <%= f.input :name %>
-      <%= f.input :alias %>
-      <%= f.input :bio %>
-      <%= f.input :price %>
-      <%= f.input :weapon %>
-      <%= f.input :abilities %>
-      <%= f.input :location %>
-      <%= f.input :photo, as: :file, input_html: { class: 'd-none hidden' , id: 'photo-input'} ,  label_html: { class: 'upload-photo'}, label: '📷 Killer Mushot 📷' %>
+      <%= f.input :name, placeholder: 'Name', label:false %>
+      <%= f.input :alias, placeholder: 'Alias', label:false %>
+      <%= f.input :bio, placeholder: 'Skills', label:false %>
+      <%= f.input :price, placeholder: 'Price', label:false %>
+      <%= f.input :location, placeholder: 'Location', label:false %>
+      <%= f.input :photo, as: :file, input_html: { class: 'd-none hidden', id: 'photo-input'} ,  label_html: { class: 'upload-photo'}, label: '📷 Upload an spooky Image of yourself 📷' %>
       <%= image_tag "", width: 300, class: "hidden", id: "photo-preview" %>
       <div class="button-container-3">
-      <span class="mas">Create Killer</span>
-      <button><%= f.submit class: "form-button white-text m-2"%></button>
+        <button><%= f.submit 'Get your spook on!', class: "form-button white-text m-2"%></button>
+      </div>
+      <% end %>
+
+
     </div>
-    <% end %>
-
-
   </div>
-</div>
 
 
-<%= link_to root_path do %>
-  <h1 class="glitch" data-text="back">
-    <%= link_to "back", root_path %>
-    </h1>
-    </div>
-<% end %>
+  <div class="index-glitch">
+    <%= link_to "Back", "/" %>
+  </div>
 </body>
