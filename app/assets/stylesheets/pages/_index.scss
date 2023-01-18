@@ -4,7 +4,7 @@
 
 .killer-card {
   margin: auto;
-  width: 700px;
+  width: 20rem;
 }
 
 .killer-form {
@@ -138,9 +138,15 @@ label {
 
 .container {
 
-  max-width: 1400px;
-  height: 0.5rem;
-  // align-items: flex-start;
+  max-width: 50rem;
+  // height: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  // width: 100vw;
+  margin: 0 auto;
+
 }
 
 .index-glitch {
