@@ -25,14 +25,13 @@
 <%# Killer Photo %>
 
 <div>
-   <%# <%= cl_image_tag(@killer.photo.key, :transformation=>[ {:width=>300, :crop=>"scale"}, {:fetch_format=>:auto},{:background=>"transparent"}]) %> %>
+   <%# <%= cl_image_tag(@killer.photo.key, :transformation=>[ {:width=>300, :crop=>"scale"}, {:fetch_format=>:auto},{:background=>"transparent"}]) %>
 </div>
 
 <%# book button %>
 </div>
 <div class="button-container-no-margin mt-4">
-  <span class="mas">Book this killer</span>
-  <button><%= link_to 'Book this killer', new_spooking_path, class: "white-text mt-4"%></button>
+  <button><%= link_to 'Book Now', new_spooking_path, class: "white-text mt-4"%></button>
 </div>
 
 

@@ -1,42 +1,35 @@
 <body style="background-image: url(<%= asset_url('spooky_hallway.jpeg')%>);">
-<%= render 'shared/blood',title: "Available killers!" %>
+  <%= render 'shared/blood',title: "Available killers!" %>
 
-<div class="map-container">
-<div class="card-positions">
-    <% @killers.each do | killer| %>
-    <div class="card">
-      <div class="card-body">
-        <%# <%= cl_image_tag(killer.photo.key, :transformation=>[ {:width=>250, :crop=>"scale"}]) %> %>
-        <h3 class="card-text"><%= killer.name %> </h3>
-        <div class="button-container-no-margin">
-          <span class="mas">View Killer</span>
-          <button><%= link_to "View Killer", killer_path(killer), class: "white-text m-2"%></button>
+  <div class="map-container">
+    <div class="card-positions">
+      <% @killers.each do | killer| %>
+      <div class="card">
+        <div class="card-body">
+          <h3 class="card-text"><%= killer.name %> </h3>
+          <div class="button-container-no-margin">
+            <button><%= link_to "More details", killer_path(killer), class: "white-text m-2"%></button>
+          </div>
         </div>
       </div>
+      <% end %>
+
+
+
     </div>
-    <% end %>
 
-
-
-  </div>
-
-  <div class="map-position">
+    <%# <div class="map-position">
     <div id="map"
       style="width: 100%; height: 800px;"
-      data-markers="<%= @markers.to_json %>"
-      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-    </div>
+      data-markers="<%= @markers.to_json %>
+    <%# data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>
+    <%# </div> %>
+    <%# </div> %>
+
   </div>
 
-</div>
 
-
-<div class="index-glitch">
-  <%= link_to root_path do %>
-  <h1 class="glitch" data-text="back">
-
-  <%= link_to "back", root_path %>
-  </h1>
+  <div class="index-glitch">
+    <%= link_to "Back", "/" %>
   </div>
-  <% end %>
-</div>
+</body>
