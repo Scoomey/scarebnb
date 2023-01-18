@@ -3,7 +3,7 @@
 @import "new_spooking";
 @import "show";
 @import "sign_in";
-
+@import "new_killer";
 
 body {
   background-size: 100%;
@@ -41,7 +41,6 @@ body {
 
 .form-group {
   margin-bottom: 0.3rem;
-  display: flex;
   align-items: center;
 }
 
@@ -140,4 +139,9 @@ h4 {
 
 label {
   color: rgb(124, 12, 12);
+}
+
+abbr,
+accronym {
+  display: none;
 }

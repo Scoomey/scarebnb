@@ -50,3 +50,12 @@ form {
 ::placeholder {
   text-align: center;
 }
+
+.home-container {
+  max-width: 50rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}

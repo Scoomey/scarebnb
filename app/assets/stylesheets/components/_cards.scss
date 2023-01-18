@@ -4,32 +4,33 @@
   grid-gap: 12px;
   align-items: center;
 }
+
 .card {
   border-radius: 8%;
   color: rgb(167, 54, 54);
-  background-color: rgba($color: #ffffff, $alpha: 0.4);
-  width: 220px;
-  margin-bottom: 20px;
+  background-color: rgba($color: #8585853e, $alpha: 0.4);
+  width: 16rem;
+  margin: 1rem;
 }
 
-.card-body{
-  margin: 1px;
-  padding: 5px 5px;
+.card-body {
+  margin: 0.5rem;
+  padding: 1rem 1rem;
 }
 
-.card-body img {
-  border-radius: 10%;
+// .card-body img {
+//   border-radius: 10%;
 
-  width: 200px;
-}
+//   width: 200px;
+// }
 
-.map-container{
+.map-container {
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
 }
 
-.map-position{
+.map-position {
   width: 70%;
   position: sticky;
   top: 0px;
