@@ -1,6 +1,9 @@
 // Import page-specific CSS files here.
 @import "home";
 @import "new_spooking";
+@import "show";
+@import "sign_in";
+
 
 body {
   background-size: 100%;
@@ -137,9 +140,4 @@ h4 {
 
 label {
   color: rgb(124, 12, 12);
-}
-
-abbr,
-accronym {
-  display: none;
 }
