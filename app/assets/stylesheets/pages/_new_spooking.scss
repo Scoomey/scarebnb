@@ -1,11 +1,21 @@
 .form-button {
-  background:none !important;
-  border:none !important;
+  background: none !important;
+  border: none !important;
 }
 
 .spookingcontainer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  .form-group {
+    display: block;
+
+  }
+}
+
+abbr,
+accronym {
+  display: none;
 }
