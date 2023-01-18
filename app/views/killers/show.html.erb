@@ -1,46 +1,23 @@
 <body style="background-image: url(<%= asset_url('spooky_hallway.jpeg')%>);">
-<%= render 'shared/blood',title: @killer.name  %>
-
-
-
-
-
-
-<div class="killer-card">
-
-
+  <%= render 'shared/blood',title: @killer.name  %>
+  <div class="killer-card">
     <h3><strong><%= @killer.alias %></strong></h3>
     <h3><i>£<%= @killer.price %></i></h3>
-
-
-
-  <p><%= @killer.bio %></p>
-
-  <p><strong>Weapon: </strong> <%= @killer.weapon %></p>
-
-  <p><strong>Abilities: </strong> <%= @killer.abilities %></p>
-
-  <p><strong><u>Location: </strong><%= @killer.location %></u></p>
-
-<%# Killer Photo %>
-
-<div>
-   <%# <%= cl_image_tag(@killer.photo.key, :transformation=>[ {:width=>300, :crop=>"scale"}, {:fetch_format=>:auto},{:background=>"transparent"}]) %>
-</div>
-
-<%# book button %>
-</div>
-<div class="button-container-no-margin mt-4">
-  <button><%= link_to 'Book Now', new_spooking_path, class: "white-text mt-4"%></button>
-</div>
-
-
-<%# back button %>
-    <%= link_to killers_path do %>
-      <h1 class="glitch" data-text="back">
-        <%= link_to "back", killers_path %>
-        </h1>
-        </div>
-    <% end %>
+    <p><%= @killer.bio %></p>
+    <p><strong>Weapon: </strong> <%= @killer.weapon %></p>
+    <p><strong>Abilities: </strong> <%= @killer.abilities %></p>
+    <p><strong><u>Location: </strong><%= @killer.location %></u></p>
+    <%# Killer Photo %>
+    <div>
+      <%# <%= cl_image_tag(@killer.photo.key, :transformation=>[ {:width=>300, :crop=>"scale"}, {:fetch_format=>:auto},{:background=>"transparent"}]) %>
+    </div>
+    <%# book button %>
+  </div>
+  <div class="button-container-no-margin mt-4">
+    <button><%= link_to 'Book Now', new_spooking_path, class: "white-text mt-4"%></button>
+  </div>
+  <div class="index-glitch">
+    <%= link_to "Back to Spooks!", killers_path %>
+  </div>
 
 </body>

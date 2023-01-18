@@ -2,6 +2,8 @@ form {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 30rem;
+
 
   .form-control {
     border: 0px;
@@ -42,20 +44,11 @@ form {
 
 
 .mainbit {
-  margin-top: 5rem !important;
+  // margin-top: 5rem !important;
   width: 30rem;
   text-align: center;
 }
 
 ::placeholder {
   text-align: center;
-}
-
-.home-container {
-  max-width: 50rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
 }

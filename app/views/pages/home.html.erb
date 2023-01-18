@@ -1,23 +1,22 @@
 <body
   style="background-image: url(<%= asset_url('spooky_forest.jpeg')%>); background-attachment: fixed; background-repeat: no-repeat; background-size: cover;">
 
-  <div class="home-container">
-    <h1 class="title">
-      Welcome to SCAREBNB!
-    </h1>
-    <div class="mainbit">
-      <div class="row">
-        <div class="col-6 m-auto">
-          <%= form_tag killers_path, method: :get do %>
-          <%= text_field_tag :query,
+  <h1 class="title">
+    Welcome to SCAREBNB!
+  </h1>
+  <div class="mainbit">
+    <div class="row">
+      <div class="col-6">
+        <%= form_tag killers_path, method: :get do %>
+        <%= text_field_tag :query,
             params[:query],
             class: "form-control",
             placeholder: "Find Spooks near you!"
           %>
-          <%= submit_tag "Search", class: "btn btn-danger white-text" %>
-          <% end %>
-        </div>
+        <%= submit_tag "Search", class: "btn btn-danger white-text" %>
+        <% end %>
       </div>
+    </div>
     <div class="button-container">
       <button><%= link_to 'Book a Spook!', new_spooking_path, class: "btn btn-danger white-text"%></button>
       <button><%= link_to 'View our Spooks', killers_path, class: "btn btn-danger white-text"%></button>

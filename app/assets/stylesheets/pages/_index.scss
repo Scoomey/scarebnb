@@ -19,9 +19,10 @@ body {
   max-width: 50rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   margin: 0 auto;
+  height: 25rem;
 }
 
 .killer-card {
@@ -29,10 +30,10 @@ body {
   width: 20rem;
 }
 
-.killer-form {
-  width: 40rem;
-  margin: 0.3rem;
-}
+// .killer-form {
+//   width: 40rem;
+//   margin: 0.3rem;
+// }
 
 .form-control {
   background-color: rgb(53, 52, 52);
