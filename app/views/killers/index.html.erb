@@ -6,7 +6,7 @@
     <% @killers.each do | killer| %>
     <div class="card">
       <div class="card-body">
-        <%= cl_image_tag(killer.photo.key, :transformation=>[ {:width=>250, :crop=>"scale"}]) %>
+        <%# <%= cl_image_tag(killer.photo.key, :transformation=>[ {:width=>250, :crop=>"scale"}]) %> %>
         <h3 class="card-text"><%= killer.name %> </h3>
         <div class="button-container-no-margin">
           <span class="mas">View Killer</span>

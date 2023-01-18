@@ -1,32 +1,39 @@
 .navbar-lewagon {
-  justify-content: space-between;
-  background:transparent;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
   height: 52px;
-  }
+  align-items: center;
 
-.nav-link{
-  color: rgb(124, 12, 12) !important;
+  .navbar-nav {
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 100%;
   }
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
-  height: 40px;
+.nav-link {
+  color: rgb(124, 12, 12) !important;
+}
+
+.avatarhead {
+  margin: 8px;
 }
 
 
 #killer_photo {
-    color:rgb(124, 12, 12)  ;
+  color: rgb(124, 12, 12);
 }
 
 .upload-photo {
   border: 1px solid #000000;
   border-radius: 8px;
-  color:white;
+  color: white;
   padding: 16px 24px;
   cursor: pointer;
-  font-weight: 250 ;
+  font-weight: 250;
   background: #7d0d0d;
 }

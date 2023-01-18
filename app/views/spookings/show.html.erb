@@ -5,9 +5,9 @@
     <div>
       <%= render 'shared/blood',title: @spooking.killer.alias %>
       <div>
-        <% if @spooking.killer.photo.attached? %>
-        <%= cl_image_tag(@spooking.killer.photo.key, :transformation=>[ {:width=>250, :crop=>"scale"}, {:fetch_format=>:auto},{:radius=>"max"},{:background=>"transparent"}]) %>
-        <% end %>
+        <%# <% if @spooking.killer.photo.attached? %>
+        <%# <%= cl_image_tag(@spooking.killer.photo.key, :transformation=>[ {:width=>250, :crop=>"scale"}, {:fetch_format=>:auto},{:radius=>"max"},{:background=>"transparent"}]) %>
+        <%# <% end %>
       </div>
       <div class="spooking-show-container">
         <div class="spooking-show-card">
