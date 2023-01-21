@@ -1,6 +1,8 @@
 class KillersController < ApplicationController
   before_action :set_killer, only: [:show, :edit, :update, :destroy]
 
+  skip_before_action :authenticate_user!, only: [:index, :show]
+
   def index
     if params[:query].present?
       @killers = Killer.search_by_name_and_alias(params[:query])

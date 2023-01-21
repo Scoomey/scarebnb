@@ -12,7 +12,7 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
   </head>
 
-  <body>
+  <body style="background-image: url(<%= asset_url('3.jpeg')%>); background-attachment: fixed; background-repeat: no-repeat; background-size: cover; backdrop-filter: blur(0.15em)">
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
     <div class="container">
