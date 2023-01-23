@@ -1,0 +1,11 @@
+production:
+  cloud_name: "dbec58ylb"
+  api_key: "645955944987262"
+  api_secret: "ZEsuLQ97pT_Q98tmQd26rjD_uuM"
+  secure: true
+
+development:
+  cloud_name: "dbec58ylb"
+  api_key: "645955944987262"
+  api_secret: "ZEsuLQ97pT_Q98tmQd26rjD_uuM"
+  secure: true

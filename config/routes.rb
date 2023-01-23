@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, controllers: {
+    registrations: 'users/registrations' }
   resource :user do
     resources :spookings, only: [:index, :show]
   end

@@ -1,18 +1,31 @@
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+jonathan = User.create(
+  [
+    email: 'jonnybell123@hotmail.com',
+    password: 'bigdaddypoop',
+    first_name: "Jonathan",
+    last_name: "Bell"
+  ]
+)
+jonny = User.create(
+  [
+    email: 'jonnybell222@gmail.com',
+    password: 'bigdaddypoop',
+    first_name: "Jonathan",
+    last_name: "Bell"
+  ]
+)
+jonno = User.create(
+  [
+    email: 'eatmyass@doochemail.com',
+    password: 'bigdaddypoop',
+    first_name: "Jonathan",
+    last_name: "Bell"
+  ]
+)
 
-# require "open-uri"
-# Killer.destroy_all
-
-# file = URI.open('https://res.cloudinary.com/dbec58ylb/image/upload/v1629888780/freddy_m2duge.jpg')
-# killer = Killer.new(name: "The Nightmare", alias: 'Freddy Krueger', bio: 'The Nemesis is a Model T-103 Tyrant', location: 'Raccoon City', price: 2000, user_id: 1)
-# killer.photo.attach(io: file, filename: 'nemesis.jpeg', content_type: 'image/png')
-# killer.save!
 
 nemesis = Killer.create!(
   [ user_id: 1,
@@ -23,7 +36,7 @@ nemesis = Killer.create!(
     price: 2000]
 )
 the_executioner = Killer.create!(
-  [ user_id: 1,
+  [ user_id: 2,
     name: "The Executioner",
     alias: "Pyramid Head",
     bio: "A sadistic and merciless executioner",
@@ -41,7 +54,7 @@ freddy_krueger = Killer.create!(
   )
 
 the_cannibal = Killer.create!(
-  [ user_id: 1,
+  [ user_id: 3,
     name: "The Cannibal",
     alias: "Leatherface",
     bio: "placeholder",
@@ -58,7 +71,7 @@ pinhead = Killer.create!(
     price: 666,]
     )
 the_abomination = Killer.create!(
-  [ user_id: 1,
+  [ user_id: 2,
     name: "The Taker of Souls",
     alias: "The Abomination ",
     bio: "The Taker of Souls is the incorporeal entity from another world.",
@@ -67,7 +80,7 @@ the_abomination = Killer.create!(
   )
 
 the_demogorgon = Killer.create!(
-  [ user_id: 1,
+  [ user_id: 3,
     name: "The Monster",
     alias: "The Demogorgon",
     bio: "A blooming mouth full of needle-like teeth for a face, large, curved, razor-sharp claws, and powerful leg.",
@@ -85,10 +98,19 @@ the_pig = Killer.create!(
   )
 
 creeper = Killer.create!(
-  [ user_id: 1,
+  [ user_id: 2,
     name: "The Demon",
     alias: "Creeper",
     bio: "It is an ancient, mysterious demon, who seeks organs from humans to replace its own.",
     location: "North Central Florida",
     price: 10000]
+  )
+
+poopdog = Killer.create!(
+  [ user_id: 3,
+    name: "The poopdogg",
+    alias: "big daddy poops",
+    bio: "Poopin all around the world",
+    location: "Poopsville",
+    price: 42069]
   )

@@ -57,7 +57,7 @@ ActiveRecord::Schema.define(version: 2023_01_19_172733) do
     t.datetime "updated_at", precision: 6, null: false
     t.date "start_date"
     t.date "end_date"
-    t.string "status"
+    t.string "status", default: "pending"
     t.bigint "user_id", null: false
     t.bigint "killer_id", null: false
     t.index ["killer_id"], name: "index_spookings_on_killer_id"
