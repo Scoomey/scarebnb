@@ -29,8 +29,8 @@ jonno = User.create(
 
 nemesis = Killer.create!(
   [ user_id: 1,
-    name: 'The Tyrant',
-    alias: 'Nemesis',
+    name: 'Nemesis',
+    alias: 'The Tyrant',
     bio: 'The Nemesis is a Model T-103 Tyrant',
     location: 'Raccoon City',
     price: 2000]
