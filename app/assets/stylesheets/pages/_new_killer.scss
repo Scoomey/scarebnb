@@ -1,6 +1,17 @@
 .form-group {
   width: 30rem;
   display: block;
+  text-align: center;
+
+
+}
+
+input::-webkit-input-placeholder {
+  line-height: normal !important;
+}
+
+::placeholder {
+  text-align: center;
 }
 
 .upload-photo {

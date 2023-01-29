@@ -9,26 +9,23 @@
   border-radius: 8%;
   color: rgb(167, 54, 54);
   background-color: rgba($color: #8585853e, $alpha: 0.4);
-  width: 16rem;
+  width: 12rem;
   margin: 1rem;
 }
 
 .card-body {
   margin: 0.5rem;
-  padding: 1rem 1rem;
+  padding: 0.5rem 0.5rem;
+
+  h3 {
+    font-size: 1.5rem;
+  }
 }
-
-// .card-body img {
-//   border-radius: 10%;
-
-//   width: 200px;
-// }
 
 
 .card-positions {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: end;
+  grid-auto-rows: 11 rem;
 }

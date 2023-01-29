@@ -20,10 +20,10 @@ $fa-font-path: '@fortawesome/fontawesome-free/webfonts';
 @import "pages/index";
 @import "devise/index";
 
-body {
+html {
   height: 100%;
 }
 
-html {
-  height: 100%;
+body {
+  min-height: 100%;
 }
