@@ -46,14 +46,12 @@ body {
 }
 
 .title {
-  font-weight: 1000;
-  font-size: 3rem;
-  margin: 0 auto;
-  filter: url(#goo);
+  font-size: 5rem;
   position: relative;
-  letter-spacing: 0.3rem;
-  color: rgb(124, 12, 12);
-  text-transform: uppercase;
+  font-family: 'CarnivalCorpseShadowExpanded', sans-serif;
+  color: black;
+  font-weight: 300;
+
 }
 
 .drop {
@@ -109,7 +107,9 @@ body {
 
 a {
   text-decoration: none !important;
-  color: rgb(124, 12, 12);
+  // color: rgb(124, 12, 12);
+  color: black;
+
 }
 
 
@@ -118,20 +118,22 @@ p {
   ;
 }
 
-h1 {
-  color: rgb(124, 12, 12);
-}
-
 h2 {
-  color: rgb(124, 12, 12);
+  // color: rgb(124, 12, 12);
+  color: black;
+
 }
 
 h3 {
-  color: rgb(124, 12, 12);
+  // color: rgb(124, 12, 12);
+  color: black;
+
 }
 
 h4 {
-  color: rgb(124, 12, 12);
+  // color: rgb(124, 12, 12);
+  color: black;
+
 }
 
 label {
