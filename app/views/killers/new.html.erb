@@ -9,15 +9,16 @@
     <%= f.input :alias, placeholder: 'Alias', label:false %>
     <%= f.input :price, placeholder: 'Price', label:false %>
     <%= f.input :location, placeholder: 'Location', label:false %>
-    <%= f.input :photo, as: :file, input_html: { class: 'd-none hidden', id: 'photo-input'} ,  label_html: { class: 'upload-photo'}, label: '📷 Upload an spooky Image of yourself 📷' %>
+    <%= f.input :photo, as: :file, input_html: { class: 'd-none hidden', id: 'photo-input'} , label_html: { class: 'upload-photo'}, label: ('Upload an image <i class="fa-solid fa-upload"></i>').html_safe%>
+
     <%= image_tag "", width: 300, class: "hidden", id: "photo-preview" %>
     <div class="button-container-3">
-      <button><%= f.submit 'Get your spook on!', class: "form-button white-text m-2"%></button>
+      <button><%= f.submit 'Get your spook on!', class: "form-button"%></button>
     </div>
     <% end %>
   </div>
 
-  <div class="index-glitch">
+  <div class="my_button">
     <%= link_to "Back", "/" %>
   </div>
 </body>

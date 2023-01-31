@@ -1,9 +1,7 @@
 .form-group {
-  width: 30rem;
+  width: 20rem;
   display: block;
   text-align: center;
-
-
 }
 
 input::-webkit-input-placeholder {
@@ -15,6 +13,12 @@ input::-webkit-input-placeholder {
 }
 
 .upload-photo {
-  padding: 0.5rem;
+  padding: 0.25rem;
   margin: 0;
+  width: 18rem;
+  color: #495057;
+  background-color: #353434;
+  font-weight: 600;
+  font-family: 'Raleway';
+
 }

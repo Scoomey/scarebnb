@@ -3,6 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 20rem;
 
   .form-group {
     display: flex;
@@ -11,6 +12,8 @@
 
     label {
       padding-right: 0.5rem;
+      color: whitesmoke;
+
     }
   }
 }
@@ -31,4 +34,9 @@
     margin-top: 0rem;
     margin-left: 0rem;
   }
+}
+
+.other-buttons,
+a {
+  color: whitesmoke;
 }
