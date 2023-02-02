@@ -8,7 +8,6 @@ class Killer < ApplicationRecord
   validates :price, numericality: { greater_than_or_equal_to: 5 }
   belongs_to :user
   has_many :spookings
-  has_one_attached :photo
   geocoded_by :location
   after_validation :geocode, if: :will_save_change_to_location?
 
