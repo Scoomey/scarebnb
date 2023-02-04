@@ -5,7 +5,7 @@
       <% @killers.each do | killer| %>
       <div class="card">
         <div class="card-body">
-          <%= image_tag killer.photo, height: 100 if killer.photo.attached? %>
+          <%= image_tag killer.image, class:'index-image' %>
           <h3 class="card-text"><%= killer.name %> </h3>
           <div class="button-container-no-margin">
             <button><%= link_to "More details", killer_path(killer), class: "white-text m-2"%></button>

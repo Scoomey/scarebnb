@@ -1,54 +1,44 @@
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
-
-
 jonathan = User.create(
   [
     email: 'jonnybell123@hotmail.com',
-    password: 'bigdaddypoop',
+    password: '123456',
     first_name: "Jonathan",
-    last_name: "Bell"
+    last_name: "Bell",
+    avatar: 'me'
   ]
 )
 jonny = User.create(
   [
     email: 'jonnybell222@gmail.com',
-    password: 'bigdaddypoop',
+    password: '123456',
     first_name: "Jonathan",
-    last_name: "Bell"
+    last_name: "Bell",
+    avatar: 'me'
+
   ]
 )
-# jonno = User.create(
-#   [
-#     email: 'eatmyass@doochemail.com',
-#     password: 'bigdaddypoop',
-#     first_name: "Jonathan",
-#     last_name: "Bell"
-#   ]
-# )
-
-
 nemesis = Killer.create!(
-  [ user_id: 1,
+  [
+    user_id: 1,
     name: 'Nemesis',
     alias: 'The Tyrant',
     bio: 'The Nemesis is a Model T-103 Tyrant',
     location: 'Raccoon City',
     price: 2000,
-    # photo: 'app/assets/images/nemesis.jpeg']
-  ]
+    image: 'nemesis']
 )
 the_executioner = Killer.create!(
-  [ user_id: 2,
+  [
+    user_id: 2,
     name: "Pyramid Head",
     alias: "The executioner",
     bio: "A sadistic and merciless executioner",
     location: "Silent hill",
     price: 2000,
-
-    # photo: 'app/assets/images/pyramid_head.png']
-  ]
+    image: 'pyramid_head']
   )
 
 # freddy_krueger = Killer.create!(

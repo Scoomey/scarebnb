@@ -1,4 +1,4 @@
-<body style="background-image: url(<%= asset_url('spooky_hallway.jpeg')%>);">
+<body>
 
   <%= render 'shared/blood',title: "Sell your spooky skills!" %>
   <div class=" killer-form">
@@ -9,7 +9,7 @@
     <%= f.input :alias, placeholder: 'Alias', label:false %>
     <%= f.input :price, placeholder: 'Price', label:false %>
     <%= f.input :location, placeholder: 'Location', label:false %>
-    <%= f.input :photo, as: :file, input_html: { class: 'd-none hidden', id: 'photo-input'} , label_html: { class: 'upload-photo'}, label: ('Upload an image <i class="fa-solid fa-upload"></i>').html_safe%>
+    <%= f.input :image, as: :file, input_html: { class: 'd-none hidden', id: 'photo-input'} , label_html: { class: 'upload-photo'}, label: ('Upload an image <i class="fa-solid fa-upload"></i>').html_safe%>
 
     <%= image_tag "", width: 300, class: "hidden", id: "photo-preview" %>
     <div class="button-container-3">

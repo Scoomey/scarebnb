@@ -1,25 +1,27 @@
-<body style="background-image: url(<%= asset_url('spooky_forest.jpeg')%>);">
-<h2>Sign up</h2>
+<body>
 
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <h2>Sign up</h2>
+
+  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
 
-  <div class="form-inputs">
-    <%= f.input :first_name,
+  <%= f.input :avatar, as: :file, input_html: { class: 'd-none hidden', id: 'photo-input'} , label_html: { class: 'upload-photo'}, label: ('Upload an image <i class="fa-solid fa-upload"></i>').html_safe%>
+
+  <%= f.input :first_name,
                 required: true,
                 input_html: { autocomplete: "first-name", class: "test" }%>
-    <%= f.input :last_name,
+  <%= f.input :last_name,
                 required: true,
                 input_html: { autocomplete: "last-name", class: "test" }%>
-    <%= f.input :email,
+  <%= f.input :email,
                 required: true,
                 autofocus: true,
                 input_html: { autocomplete: "email", class: "test" }%>
-    <%= f.input :password,
+  <%= f.input :password,
                 required: true,
                 placeholder: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
                 input_html: { autocomplete: "new-password" } %>
-    <%= f.input :password_confirmation,
+  <%= f.input :password_confirmation,
                 required: true,
                 label: "Confirmation",
                 input_html: { autocomplete: "new-password" } %>
@@ -28,7 +30,7 @@
   <div class="form-actions">
     <%= f.button :submit, "Sign up", class: "btn btn-danger" %>
   </div>
-<% end %>
+  <% end %>
 
-<%= render "devise/shared/links" %>
+  <%= render "devise/shared/links" %>
 </body>

@@ -10,6 +10,7 @@ class Killer < ApplicationRecord
   has_many :spookings
   geocoded_by :location
   after_validation :geocode, if: :will_save_change_to_location?
+  validates :image, presence: true
 
   include PgSearch::Model
   pg_search_scope :search_by_name_and_alias,

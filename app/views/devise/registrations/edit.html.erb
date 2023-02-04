@@ -11,15 +11,17 @@
       <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
     <% end %>
 
+    <%= f.input :avatar, as: :file, input_html: { class: 'd-none hidden', id: 'photo-input'} , label_html: { class: 'upload-photo'}, label: ('Upload an image <i class="fa-solid fa-upload"></i>').html_safe%>
+
     <%= f.input :password,
-                hint: "leave it blank if you don't want to change it",
+                label: 'New password',
                 required: false,
                 input_html: { autocomplete: "new-password" } %>
     <%= f.input :password_confirmation,
+                label: 'confirm new password',
                 required: false,
                 input_html: { autocomplete: "new-password" } %>
     <%= f.input :current_password,
-                hint: "we need your current password to confirm your changes",
                 required: true,
                 input_html: { autocomplete: "current-password" } %>
   </div>
