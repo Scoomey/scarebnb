@@ -41,14 +41,14 @@ the_executioner = Killer.create!(
     image: 'pyramid_head']
   )
 
-# freddy_krueger = Killer.create!(
-#   [ user_id: 1,
-#     name: "The Nightmare",
-#     alias: "Freddy Krueger",
-#     bio: "Even while he lived, Freddy Krueger was a creature of nightmares",
-#     location: "Elm Street",
-#     price: 200]
-#   )
+freddy_krueger = Killer.create!(
+  [ user_id: 1,
+    name: "Freddy Kruegerare",
+    alias: "The Nightmare",
+    bio: "Even while he lived, Freddy Krueger was a creature of nightmares",
+    location: "Elm Street",
+    price: 200]
+  )
 
 # the_cannibal = Killer.create!(
 #   [ user_id: 3,
