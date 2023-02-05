@@ -1,0 +1,39 @@
+.form-button {
+  background: none !important;
+  border: none !important;
+}
+
+.spookingcontainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  .form-group {
+    display: block;
+
+
+  }
+
+}
+
+.new_spooking div {
+  justify-content: center !important;
+
+}
+
+.start_spook {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-direction: column !important;
+}
+
+#spooking_start_date {
+  width: 10rem;
+}
+
+.spooking_end_date {
+
+  width: 10rem !important;
+}

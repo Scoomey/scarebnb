@@ -1,35 +1,41 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <%= link_to "#", class: "navbar-brand" do %>
-    <%= image_tag "https://s9.gifyu.com/images/ezgif.com-gif-maker-2e07d4755cfcd4532.gif",   class: "skull" %>
-    <% end %>
 
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+  <ul class="navbar-nav mr-auto">
 
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <% if user_signed_in? %>
-        <li class="nav-item active">
-          <%= link_to "Home", "#", class: "nav-link" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to "Messages", "#", class: "nav-link" %>
-        </li>
-        <li class="nav-item dropdown">
-          <%= image_tag "https://images.unsplash.com/photo-1627784669170-3aa0a8dee255", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <%= link_to "View Spookings", "#", class: "dropdown-item" %>
-            <%= link_to "View Killers", "#", class: "dropdown-item" %>
-            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-          </div>
-        </li>
-      <% else %>
-        <li class="nav-item">
-          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-        </li>
+    <%# if at the log in screen when logged out %>
+    <% if user_signed_in?%>
+    <li class="nav-item">
+      <%= link_to root_path, class: "nav-link" do %>
+      <i class="fa-solid fa-house"></i>
       <% end %>
-    </ul>
-  </div>
+    </li>
+
+    <li class="nav-item dropdown avatarhead">
+      <span class="user_name">Welcome <%=current_user.first_name%></span>
+        <%= image_tag(!current_user.avatar.blank? ? current_user.avatar : 'default_image', class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false) %>
+      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+        <%= link_to "My Spookings", spookings_path, class: "dropdown-item" %>
+        <%= link_to "My Spooks", killers_path, class: "dropdown-item" %>
+        <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+      </div>
+    </li>
+    <% elsif current_page?(controller: 'devise/sessions', action: 'new')%>
+    <%# else if on the login page have just the home button %>
+    <li class="nav-item">
+      <%= link_to root_path, class: "nav-link" do %>
+        <i class="fa-solid fa-house"></i>
+      <% end %>
+    </li>
+    <%# else just show the login and the home %>
+    <% else%>
+    <li class="nav-item">
+      <%= link_to root_path, class: "nav-link" do %>
+      <i class="fa-solid fa-house"></i>
+      <% end %>
+    </li>
+    <li class="nav-item">
+      <%= link_to "Log In",new_user_session_path, class:'log-in-button' %>
+    </li>
+    <% end %>
+  </ul>
 </div>

@@ -1,1 +1,25 @@
-<h1>Welcome to Scare BnB!</h1>
+<body>
+
+  <h1 class="title">
+    Welcome to SCAREBNB!
+  </h1>
+  <div class="mainbit">
+    <div class="row">
+      <div class="col-6">
+        <%= form_tag killers_path, method: :get do %>
+        <%= text_field_tag :query,
+            params[:query],
+            class: "form-control",
+            placeholder: "Find Spooks in your area!"
+          %>
+        <%= submit_tag "Search", class: "btn btn-danger white-text" %>
+        <% end %>
+      </div>
+    </div>
+    <div class="button-container">
+      <button><%= link_to 'Book a Spook!', new_spooking_path, class: "btn btn-danger white-text"%></button>
+      <button><%= link_to 'View our Spooks', killers_path, class: "btn btn-danger white-text"%></button>
+      <button><%= link_to 'List your spooky skills', new_killer_path, class: "btn btn-danger white-text"%></button>
+    </div>
+  </div>
+</body>

@@ -1,1 +1,63 @@
-// Specific CSS for your home-page
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30rem;
+
+
+  .form-control {
+    border: 0px;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+
+  }
+
+  .form-control:focus {
+    background-color: black !important;
+    color: whitesmoke !important;
+  }
+
+  .btn {
+    margin-bottom: 0.5rem;
+    margin-top: 0;
+    border: 0px;
+    width: 5rem !important;
+    // height: 2.2rem !important;
+    font-size: 1rem !important;
+    border: 2px solid black;
+    border-radius: 0.25rem;
+  }
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+
+  button {
+    background-color: transparent;
+    margin-bottom: 0.5rem;
+    margin-top: 0;
+    border: 0px;
+
+    a {
+      border: 2px solid black;
+      border-radius: 0.25rem;
+      margin-bottom: 0rem;
+      margin-top: 0;
+      // border: 0px;
+      font-size: 1rem !important;
+      // height: 2.2rem !important;
+    }
+  }
+}
+
+
+.mainbit {
+  // margin-top: 5rem !important;
+  width: 30rem;
+  text-align: center;
+}
+
+::placeholder {
+  text-align: center;
+}

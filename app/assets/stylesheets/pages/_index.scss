@@ -1,10 +1,13 @@
 // Import page-specific CSS files here.
 @import "home";
-
+@import "new_spooking";
+@import "show";
+@import "sign_in";
+@import "new_killer";
 
 body {
-  background-image: url("https://images.unsplash.com/photo-1523804427826-322aa3cfaa42");
   background-size: 100%;
+  background-attachment: fixed;
   color: whitesmoke;
   align-items: center;
   justify-content: center;
@@ -12,67 +15,131 @@ body {
   font-family: Raleway, sans-serif;
 }
 
-.skull {
+.container {
+  max-width: 50rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0 auto;
+  min-height: 25rem;
+}
+
+.killer-card {
+  margin: auto;
+  width: 20rem;
+}
+
+
+.form-control {
+  background-color: rgb(53, 52, 52);
   border: 2px solid rgb(90, 10, 10);
-  border-radius: 50%;
-  height: 45px;
-  width: 45px;
+}
+
+.form-group {
+  margin-bottom: 0.3rem;
+  align-items: center;
+}
+
+.form-control-file {
+  height: 0.5rem;
 }
 
 .title {
-  font-weight: 1000;
-  font-size: 80px;
-  margin: 0 auto;
-  filter: url(#goo);
+  font-size: 5rem;
   position: relative;
-  letter-spacing: -.04em;
+  font-family: 'CarnivalCorpseShadowExpanded', sans-serif;
+  color: black;
+  font-weight: 300;
+
+}
+
+p {
+  color: whitesmoke;
+  ;
+}
+
+h2 {
+  // color: rgb(124, 12, 12);
+  color: whitesmoke;
+
+}
+
+
+h4 {
+  // color: rgb(124, 12, 12);
+  color: black;
+
+}
+
+label {
   color: rgb(124, 12, 12);
-  text-transform: uppercase;
 }
 
-.drop {
-  width: .1em; height: .1em;
-  border-radius: 0 100% 100% 100%;
-  background-color: currentColor;
-  position: absolute;
-  top: 72%;
-  animation: drop 3s infinite both;
-
-  &:nth-child(1) {
-    left: 14%;
-  }
-
-  &:nth-child(2) {
-    left: 39%;
-    animation-delay: -.4s;
-  }
-
-  &:nth-child(3) {
-    left: 55%;
-    animation-delay: -1.5s;
-  }
-
-  &:nth-child(4) {
-    left: 82%;
-    animation-delay: -.8s;
-  }
-
-  &:nth-child(5) {
-    left: 95.5%;
-    animation-delay: -1.3s;
-  }
+abbr,
+accronym {
+  display: none;
 }
 
-@keyframes drop {
-  0% {
-    transform: translateY(0) scaleX(.85) rotate(45deg);
-    animation-timing-function: ease-out;
+.index-image {
+  width: 8rem;
+  height: 11rem;
+  object-fit: contain;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 12px;
+  align-items: center;
+}
+
+.cards {
+  border-radius: 8%;
+  color: rgb(167, 54, 54);
+  // background-color: rgba($color: #8585853e, $alpha: 0.4);
+  background-color: transparent;
+
+
+  width: 12rem;
+  margin: 1rem;
+}
+
+.card-body {
+  margin: 0.5rem;
+  padding: 0.5rem 0.5rem;
+  height: 16rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+
+  h3 {
+    font-size: 1rem;
+    color: black;
   }
-  60% {
-    transform: translateY(120%) scaleX(.85) rotate(45deg);
-    animation-timing-function: ease-in;
+
+  .index-card-button {
+    border: 2px solid black !important;
+    border-radius: 0.25rem;
+    width: 5rem;
+    height: 2rem;
+    font-size: 0.5rem;
+
+    a {
+      text-decoration: none;
+
+      &:hover {
+        color: inherit;
+      }
+    }
   }
-  80%, 100% {
-    transform: translateY(60vh) scaleX(.85) rotate(45deg);
-  }
+
+}
+
+.card-positions {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: end;
+  grid-auto-rows: 11 rem;
 }

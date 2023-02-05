@@ -1,0 +1,24 @@
+<body>
+
+  <%= render 'shared/blood',title: "Sell your spooky skills!" %>
+  <div class=" killer-form">
+    <%= simple_form_for [@killer] do |f| %>
+    <%= f.error_notification %>
+    <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+    <%= f.input :name, placeholder: 'Name', label:false %>
+    <%= f.input :alias, placeholder: 'Alias', label:false %>
+    <%= f.input :price, placeholder: 'Price', label:false %>
+    <%= f.input :location, placeholder: 'Location', label:false %>
+    <%= f.input :image, as: :file, input_html: { class: 'd-none hidden', id: 'photo-input'} , label_html: { class: 'upload-photo'}, label: ('Upload an image <i class="fa-solid fa-upload"></i>').html_safe%>
+
+    <%= image_tag "", width: 300, class: "hidden", id: "photo-preview" %>
+    <div class="button-container-3">
+      <button><%= f.submit 'Get your spook on!', class: "form-button"%></button>
+    </div>
+    <% end %>
+  </div>
+
+  <div class="my_button">
+    <%= link_to "Back", "/" %>
+  </div>
+</body>

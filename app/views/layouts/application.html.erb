@@ -1,24 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Scarebnb</title>
+    <title>ScareBnB</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,500,700,900" rel="stylesheet">
-
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-
+    <%= stylesheet_pack_tag 'application' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
   </head>
 
-  <body>
-  <%= render 'shared/navbar' %>
-  <%= render 'shared/flashes' %>
-  <div class="container">
-
-
-    <%= yield %>
+  <body style="background-image: url(<%= asset_url('3.jpeg')%>); background-attachment: fixed; background-repeat: no-repeat; background-size: cover; backdrop-filter: blur(0.3em)">
+    <%= render 'shared/navbar' %>
+    <%= render 'shared/flashes' %>
+    <div class="container">
+      <%= yield %>
     </div>
   </body>
 </html>

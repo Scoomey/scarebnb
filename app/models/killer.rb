@@ -8,4 +8,14 @@ class Killer < ApplicationRecord
   validates :price, numericality: { greater_than_or_equal_to: 5 }
   belongs_to :user
   has_many :spookings
+  geocoded_by :location
+  after_validation :geocode, if: :will_save_change_to_location?
+  validates :image, presence: true
+
+  include PgSearch::Model
+  pg_search_scope :search_by_name_and_alias,
+    against: [ :name, :alias ],
+    using: {
+      tsearch: { prefix: true }
+    }
 end

@@ -1,0 +1,20 @@
+<body
+  style="background-image: url(<%= asset_url('spooky_forest.jpeg')%>); background-attachment: fixed; background-repeat: no-repeat; background-size: cover;">
+
+  <%= render 'shared/blood', title: "new spooking!" %>
+  <%= simple_form_for [@spooking] do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+  <%= f.association :killer, label:false, include_blank:'Choose a Spook'%>
+  <%= f.input :start_date, as: :date, html5: true, label:'Start of Spooking', class: 'start_spook',include_blank:'true'
+  %>
+  <%= f.input :end_date, as: :date, html5: true,  label: 'End of Spooking'%>
+  <div class="button-container-3">
+    <button><%= f.submit class: "form-button white-text m-2 my_button"%></button>
+  </div>
+  <% end %>
+
+  <div class="my_button">
+    <%= link_to "Back", "/" %>
+  </div>
+</body>

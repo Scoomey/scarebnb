@@ -1,8 +1,20 @@
 class KillersController < ApplicationController
   before_action :set_killer, only: [:show, :edit, :update, :destroy]
 
+  skip_before_action :authenticate_user!, only: [:index, :show]
+
   def index
-    @killers = Killer.all
+    if params[:query].present?
+      @killers = Killer.search_by_name_and_alias(params[:query])
+    else
+      @killers = Killer.all
+    end
+    @markers = @killers.geocoded.map do |killer|
+      {
+        lat: killer.latitude,
+        lng: killer.longitude
+      }
+    end
   end
 
   def new
@@ -13,7 +25,7 @@ class KillersController < ApplicationController
     @killer = Killer.new(killer_params)
     @killer.user = current_user
     if @killer.save
-      redirect_to _path
+      redirect_to killer_path(@killer)
     else
       render 'new'
     end
@@ -40,6 +52,6 @@ class KillersController < ApplicationController
   end
 
   def killer_params
-    params.require(:killer).permit(:user_id, :name, :bio, :price, :weapon, :abilities, :location, :alias)
+    params.require(:killer).permit(:user_id, :name, :bio, :image, :price, :weapon, :abilities, :location, :alias, :latitude, :longitude)
   end
 end
