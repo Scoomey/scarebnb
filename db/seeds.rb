@@ -46,68 +46,68 @@ freddy_krueger = Killer.create!(
     name: "Freddy Kruegerare",
     alias: "The Nightmare",
     bio: "Even while he lived, Freddy Krueger was a creature of nightmares",
-    location: "Elm Street",
-    price: 200]
+    location: "Elm Street Springwood, Ohio",
+    price: 200,
+    image: 'freddy']
   )
 
-# the_cannibal = Killer.create!(
-#   [ user_id: 3,
-#     name: "The Cannibal",
-#     alias: "Leatherface",
-#     bio: "placeholder",
-#     location: "Texas",
-#     price: 500,]
-#   )
+the_cannibal = Killer.create!(
+  [ user_id: 1,
+    alias: "The Cannibal",
+    name: "Leatherface",
+    bio: "placeholder",
+    location: "Granger Texas",
+    price: 500,
+    image: 'leatherface']
+  )
 
-# pinhead = Killer.create!(
-#   [ user_id: 1,
-#     name: "Pinhead",
-#     alias: "Hell Priest",
-#     bio: "Pinhead is one of the leaders of the Cenobites, said to be humans who were later transformed into demonic creatures blindly devoted to the practice of experimental sadomasochism.",
-#     location: "Hell",
-#     price: 666,]
-#     )
-# the_abomination = Killer.create!(
-#   [ user_id: 2,
-#     name: "The Taker of Souls",
-#     alias: "The Abomination ",
-#     bio: "The Taker of Souls is the incorporeal entity from another world.",
-#     location: "Summoned from Naturom Demonto",
-#     price: 10000,]
-#   )
 
-# the_demogorgon = Killer.create!(
-#   [ user_id: 3,
-#     name: "The Monster",
-#     alias: "The Demogorgon",
-#     bio: "A blooming mouth full of needle-like teeth for a face, large, curved, razor-sharp claws, and powerful leg.",
-#     location: "Hawkins National Laboratory",
-#     price: 40000,]
-#   )
+pinhead = Killer.create!(
+  [ user_id: 1,
+    name: "Pinhead",
+    alias: "Hell Priest",
+    bio: "Pinhead is one of the leaders of the Cenobites, said to be humans who were later transformed into demonic creatures blindly devoted to the practice of experimental sadomasochism.",
+    location: "Hell",
+    price: 666,
+    image: 'pinhead']
+    )
 
-# the_pig = Killer.create!(
-#   [ user_id: 1,
-#     name: "Amanda Young",
-#     alias: "The Pig",
-#     bio: "When John Kramer, better known as Jigsaw",
-#     location: "south carolina",
-#     price: 2000]
-#   )
+the_demogorgon = Killer.create!(
+  [ user_id: 2,
+    alias: "The Monster",
+    name: "The Demogorgon",
+    bio: "A blooming mouth full of needle-like teeth for a face, large, curved, razor-sharp claws, and powerful leg.",
+    location: "Hawkins National Laboratory Atlanta",
+    price: 40000,
+    image: "demogorgon"]
 
-# creeper = Killer.create!(
-#   [ user_id: 2,
-#     name: "The Demon",
-#     alias: "Creeper",
-#     bio: "It is an ancient, mysterious demon, who seeks organs from humans to replace its own.",
-#     location: "North Central Florida",
-#     price: 10000]
-#   )
+  )
 
-# poopdog = Killer.create!(
-#   [ user_id: 3,
-#     name: "The poopdogg",
-#     alias: "big daddy poops",
-#     bio: "Poopin all around the world",
-#     location: "Poopsville",
-#     price: 42069]
-#   )
+the_pig = Killer.create!(
+  [ user_id: 1,
+    alias: "Amanda Young",
+    name: "The Pig",
+    bio: "Jigsaws assistant",
+    location: "south carolina",
+    price: 2000,
+    image: 'amandayoung']
+  )
+
+creeper = Killer.create!(
+  [ user_id: 2,
+    alias: "The Demon",
+    name: "Creeper",
+    bio: "An ancient, mysterious demon, who seeks organs from humans to replace its own.",
+    location: "North Central Florida",
+    price: 10000,
+    image: "creeper"]
+  )
+  chucky = Killer.create!(
+    [ user_id: 2,
+      alias: "The Killer Doll",
+      name: "Chucky",
+      bio: "A sadistic Killer Doll",
+      location: "New Jersey",
+      price: 10000,
+      image: "chucky"]
+    )

@@ -3,12 +3,12 @@
 
     <div class="card-positions">
       <% @killers.each do | killer| %>
-      <div class="card">
+      <div class="cards">
         <div class="card-body">
           <%= image_tag killer.image, class:'index-image' %>
           <h3 class="card-text"><%= killer.name %> </h3>
-          <div class="button-container-no-margin">
-            <button><%= link_to "More details", killer_path(killer), class: "white-text m-2"%></button>
+          <div>
+            <button class="index-card-button btn btn-danger white-text"><%= link_to "More details", killer_path(killer)%></button>
           </div>
         </div>
       </div>
